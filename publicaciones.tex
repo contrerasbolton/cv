@@ -1,0 +1,122 @@
+% Copyright 2010 Carlos Contreras Bolton (ccontreras.bolton@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\hyphenpenalty=5000
+\tolerance=1000
+\documentclass[11pt,a4paper]{moderncv}
+% moderncv themes
+\moderncvtheme{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+% \moderncvtheme[green]{classic}                % idem
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+\usepackage[english, spanish]{babel}
+\usepackage{datetime}
+\usepackage[numbers]{natbib}
+\usepackage[resetlabels]{multibib}
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{gensymb}
+\usepackage{footmisc} % enabling footnotes.
+\usepackage{academicons}
+
+\usepackage{etoolbox}
+\usepackage{ifthen}
+
+\recomputelengths                             % required when changes are made to page layout lengths
+\AtBeginDocument{
+  %% \hypersetup{pdfborder = 0 0 1,linkcolor=blue}
+  %% \definecolor{links}{HTML}{2A1B81}
+  \definecolor{links}{rgb}{0.22,0.45,0.70}% light blue
+  \hypersetup{colorlinks,linkcolor=,urlcolor=links}
+}
+
+
+% personal data
+\firstname{}
+\familyname{}
+% \title{Resumé title (optional)}               % optional, remove the line if not wanted
+\address{}{}    % optional, remove the line if not wanted
+% \mobile{mobile (optional)}                    % optional, remove the line if not wanted
+
+% \phone{+39 3387479471}                      % optional, remove the line if not wanted
+% \fax{fax (optional)}                          % optional, remove the line if not wanted
+%\email{}             % optional, remove / comment the line if not wanted
+% \extrainfo{additional information (optional)} % optional, remove the line if not wanted
+% \photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+% \quote{"They can kill you, but the legalities of eating you are quite a bit dicier" - David Foster Wallace}                 % optional, remove the line if not wanted
+
+% \nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+\newcommand\mybitem[1]{%
+  \parbox[t]{3mm}{\textbullet}\parbox[t]{14cm}{#1}\\[1.6mm]}
+
+\DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
+\DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+\DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+\DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
+\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+\DeclareRobustCommand*\cal{\@fontswitch\relax\mathcal}
+\DeclareRobustCommand*\mit{\@fontswitch\relax\mathnormal}
+
+
+\newtoggle{es}
+\newcommand{\es}[2]{\iftoggle{es}{#1}{#2}}
+
+\ifthenelse{\equal{\detokenize{pub_es}}{\jobname}}{
+  \toggletrue{es}
+  \newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] del \THEYEAR}
+}{
+  \newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] \THEYEAR}
+  \togglefalse{es}
+}
+
+\es{
+  \newcites{Sometido,Revista,Libro,Proceeding,Conferencia}{{Artículos de Revistas Científicas Sometidos (Bajo Revisión)},{Artículos de Revistas Científicas},{Capítulos de Libros},{Conferencias Indexadas},{Otras Conferencias y Charlas Internacionales}}
+}
+{
+  \newcites{Sometido,Revista,Libro,Proceeding,Conferencia}{{Journal Articles Submitted (Under Review)},{Journal Articles},{Books Chapters},{Proceedings of Indexed Conferences},{Other International Conferences and Talks}}
+}
+
+% ----------------------------------------------------------------------------------
+% content
+% ----------------------------------------------------------------------------------
+\begin{document}
+%% BibTeX file
+\es{
+%% \section{Publicaciones}
+\firstname{}
+\familyname{Publicaciones$\qquad\qquad$}
+}
+{
+\firstname{}
+\familyname{Publications$\qquad\qquad$}
+}
+\maketitle
+
+\nociteSometido{*}
+\es{\bibliographystyleSometido{spanish}}{\bibliographystyleSometido{english}}
+\bibliographySometido{publicacionesSometido}                   % 'publications' es el
+
+\nociteRevista{*}
+\es{\bibliographystyleRevista{spanish}}{\bibliographystyleRevista{english}}
+\bibliographyRevista{publicacionesRevista}                   % 'publications' es el
+% nombre del archivo BibTeX
+
+\nociteLibro{*}
+\es{\bibliographystyleLibro{spanish}}{\bibliographystyleLibro{english}}
+\bibliographyLibro{publicacionesLibro}
+
+\nociteProceeding{*}
+\es{\bibliographystyleProceeding{spanish}}{\bibliographystyleProceeding{english}}
+\bibliographyProceeding{publicacionesProceeding}
+
+\nociteConferencia{*}
+\es{\bibliographystyleConferencia{spanish}}{\bibliographystyleConferencia{english}}
+\bibliographyConferencia{publicacionesConferencia}      % 'publications'
+
+\end{document}
