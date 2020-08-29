@@ -1,0 +1,559 @@
+% Copyright 2010 Carlos Contreras Bolton (ccontreras.bolton@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\hyphenpenalty=5000
+\tolerance=1000
+\documentclass[11pt,a4paper]{moderncv}
+% moderncv themes
+\moderncvtheme{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+% \moderncvtheme[green]{classic}                % idem
+\usepackage{fontawesome}
+\usepackage{luatexbase}
+\usepackage{microtype}
+
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+\usepackage[english, spanish]{babel}
+\usepackage{datetime}
+\usepackage[numbers]{natbib}
+\usepackage[resetlabels]{multibib}
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{gensymb}
+\usepackage{footmisc} % enabling footnotes.
+
+\usepackage{academicons}
+
+\usepackage{etoolbox}
+\usepackage{ifthen}
+
+\recomputelengths                             % required when changes are made to page layout lengths
+\AtBeginDocument{
+  %% \hypersetup{pdfborder = 0 0 1,linkcolor=blue}
+  %% \definecolor{links}{HTML}{2A1B81}
+  \definecolor{links}{rgb}{0.22,0.45,0.70}% light blue
+  \hypersetup{colorlinks,linkcolor=,urlcolor=links}
+}
+
+\newcommand{\AddressOfficial}{Edmundo Larenas 219, Concepción 4070409, Chile}
+\newcommand{\correo}{carlos.contreras.b@udec.cl}
+% personal data
+\firstname{Carlos}
+\familyname{Contreras Bolton}
+% \title{Resumé title (optional)}               % optional, remove the line if not wanted
+\address{\AddressOfficial}{}    % optional, remove the line if not wanted
+% \mobile{mobile (optional)}                    % optional, remove the line if not wanted
+
+% \phone{+39 3387479471}                      % optional, remove the line if not wanted
+% \fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{\correo}             % optional, remove / comment the line if not wanted
+% \extrainfo{additional information (optional)} % optional, remove the line if not wanted
+% \photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+% \quote{"They can kill you, but the legalities of eating you are quite a bit dicier" - David Foster Wallace}                 % optional, remove the line if not wanted
+
+% \nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+\newcommand\mybitem[1]{%
+  \parbox[t]{3mm}{\textbullet}\parbox[t]{14cm}{#1}\\[1.6mm]}
+
+\DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
+\DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+\DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+\DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
+\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+\DeclareRobustCommand*\cal{\@fontswitch\relax\mathcal}
+\DeclareRobustCommand*\mit{\@fontswitch\relax\mathnormal}
+
+\newtoggle{es}
+\newcommand{\es}[2]{\iftoggle{es}{#1}{#2}}
+
+\newtoggle{short}
+\newcommand{\short}[2]{\iftoggle{short}{#1}{#2}}
+
+\ifthenelse{\equal{\detokenize{cv_es}}{\jobname}}{
+  \toggletrue{es}
+  \newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] del \THEYEAR}
+}{
+  \newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] \THEYEAR}
+  \togglefalse{es}
+}
+
+\ifthenelse{\equal{\detokenize{shortCV_en}}{\jobname}}{
+  \toggletrue{short}
+}{
+  \togglefalse{short}
+}
+
+\es{
+  \newcites{Sometido,Revista,Libro,Proceeding,Conferencia}{{Artículos Sometidos en Revistas Científicas (Bajo Revisión)},{Artículos en Revistas Científicas},{Capítulos de Libros},{Conferencias Indexadas},{Otras Conferencias y Charlas Internacionales}}
+}
+{
+  \newcites{Sometido,Revista,Libro,Proceeding,Conferencia}{{Journal Articles Submitted (Under Revision)},{Journal Articles},{Books Chapters},{Proceedings of Indexed Conferences},{Other International Conferences and Talks}}
+}
+
+% ----------------------------------------------------------------------------------
+% content
+% ----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\es {
+  \section{Información de contacto}
+  {\bf Profesor Asistente}\\
+  Departamento de Ingeniería Industrial\\%\footnotemark[1]\\
+  Universidad de Concepción\\
+  \AddressOfficial
+}{
+  \section{Contact information}
+  {\bf Assistant Professor}\\
+  Departamento de Ingeniería Industrial \\%\footnotemark[1]\\
+  Universidad de Concepción\\
+  \AddressOfficial
+}
+{
+\section{
+  \href{https://scholar.google.es/citations?user=hIl4ixAAAAAJ\&hl}{\aiGoogleScholar} ~~~~
+  \href{https://publons.com/researcher/1711633}{\aiPublons} ~~~~
+  \href{https://www.researchgate.net/profile/Carlos\_Contreras\_Bolton}{\aiResearchGate} ~~~~
+  \href{https://orcid.org/0000-0001-9549-4143}{\aiOrcid} ~~~~
+  \href{https://www.mendeley.com/profiles/carlos-contreras-bolton/}{\aiMendeley} ~~~~
+  \href{https://dblp.org/pers/hd/b/Bolton:Carlos\_Contreras}{\aidblp} ~~~~
+  \href{https://www.linkedin.com/in/carloscontrerasbolton/}{\faLinkedinSquare} ~~~~
+  \href{https://www.linkedin.com/in/carloscontrerasbolton/}{\faGithub}
+  }
+  \faHome~\href{https://sites.google.com/view/ccontrerasbolton}{sites.google.com/view/ccontrerasbolton}\\
+  \emailsymbol \href{\correo}{\correo}\\
+  \phonesymbol +56 41 2203616
+  }
+
+  \es {
+    \selectlanguage{spanish}
+    \footnotetext[1]{Actualizado en \monthyeardate\today}
+  }{
+    \selectlanguage{english}
+    \footnotetext[1]{Updated \monthyeardate\today}
+  }
+  \es{
+    \section{Posición Actual}
+    \cventry{Desde ~~~~enero 2020}{Profesor Asistente}{Departamento de Ingeniería Industrial}{Universidad de Concepción}{}{}
+  }{
+    \section{Current position}
+    \cventry{Since ~~~~January 2020}{Assistant Professor}{Departamento de Ingeniería Industrial}{Universidad de Concepción}{}{}
+  }
+
+\es {
+  \section{Formación académica}
+  \cventry{2016 -- 2018}{Dottore di Ricerca in Ingegneria Biomedica, Elettrica, dei Sistemi}{Ph.D. in
+    Biomedical, Electrical and System Engineering}{Università di Bologna}{Italia}{Especialización en Investigación de Operaciones. \newline
+    Tesis: ``Algorithms for Variants of Routing Problems''.  \newline
+    Supervisores: Paolo Toth - Valentina Cacchiani - Daniele Vigo %La defensa tendrá lugar en marzo 2019
+}
+  \cventry{2011 -- 2013}{Magíster en Ingeniería Informática}{Universidad de Santiago de
+    Chile}{}{}{Tesis: ``Combinación Automática de Operadores de un Algoritmo Genético
+    para resolver el Problema del Vendedor Viajero Simétrico''.\newline
+    Supervisor: Víctor Parada}
+  \cventry{2005 -- 2010}{Licenciado en Ciencia de la Computación}{Analista en Computación Científica}{Universidad de Santiago de Chile}{}{Tesis: ``Generación Automática de Algoritmos para el problema de Coloración de Vértices''.\newline
+    Supervisores: Rúben Carvajal Schiaffino - Víctor Parada}
+  %% \cventry{2001 -- 2004}{Enseñanza Media}{Liceo Manuel Barros Borgoño}{Santiago, Chile}{}{}
+}
+{
+  \section{Education}
+  \cventry{2016 -- 2018}{Ph.D. in Biomedical, Electrical and System Engineering}
+  {Dottore di Ricerca in Ingegneria Biomedica, Elettrica, dei Sistemi}{Università di Bologna}
+  {Italy}{Specialization in Operations Research. \newline
+    Thesis: ``Algorithms for Variants of Routing Problems''.  \newline
+    Advisors: Paolo Toth - Valentina Cacchiani - Daniele Vigo%The defence will take place in March 2019
+  }
+  \cventry{2011 -- 2013}{M.Sc. in Computer Science Engineering}{Universidad
+    de Santiago de Chile}{}{}{Thesis: ``Automatic Combination of Operators in a
+    Genetic Algorithm to solve the Symmetric Traveling Salesman Problem''.\newline
+    Advisor: Víctor Parada}
+  \cventry{2005 -- 2010}{B.Sc. in Computer Science}{Professional Degree in
+    Analyst in Scientific Computing}{Universidad de Santiago de Chile}{}{Thesis: ``Automatic Generation of Algorithms for the Vertex Coloring Problem''.\newline
+    Advisors: Rúben Carvajal Schiaffino - Víctor Parada} %arguments 3 to 6 are optional
+}
+\es
+{
+  \section{Posiciones pasadas}
+  \cventry{marzo 2019 -- enero 2020}{Investigador Postdoctoral y Profesor part-time}{Departamento de Ingeniería Informática y Departamento de
+  Matemática y Ciencia de la Computación}{Universidad de Santiago de Chile}{}{}
+  \cventry{noviembre 2015 -- octubre 2018}{Estudiante de Doctorado}{Dottorato di Ricerca in Ingegneria Biomedica, Elettrica, dei Sistemi}{Dipartimento
+  di Ingegneria dell’Energia Elettrica e dell’Informazione ``Guglielmo Marconi''}{Università di Bologna}{}
+  \cventry{julio 2015 -- octubre 2015}{Desarrollador de software y Asistente de Investigación}{Instituto Sistemas Complejos de Ingeniería}{}{}{}
+  \cventry{agosto 2012 -- septiembre 2015}{Profesor part-time}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile}{}{}
+  \cventry{marzo 2012 -- julio 2015}{Profesor part-time}{Facultad de Ingeniería}{Universidad Andrés Bello}{}{}
+  \cventry{marzo 2012 -- diciembre 2012}{Ayudante}{Ingeniería Civil en Informática}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile}{}
+  \cventry{agosto 2011 -- agosto 2012}{Ayudante}{Facultad de Ingeniería}{Universidad Andrés Bello}{}{}
+  \cventry{mayo 2010 -- febrero 2011}{Desarrollador de sistema}{SubDirección de Operación y Plataforma}{Dirección de Informática}{Pontificia Universidad Católica de Chile}{}{}{}
+  \cventry{marzo 2010 -- diciembre 2010}{Ayudante}{Departamento de Ingeniería Metalúrgica}{Universidad de Santiago de Chile}{}{}
+  \cventry{julio 2009 -- diciembre 2013}{Ayudante de Investigación}{Grupo de Optimización}{Departamento de Informática}{Universidad de Santiago de Chile}{}
+}
+{
+  \section{Past positions}
+  \cventry{March 2019 -- January 2020}{Postdoctoral Researcher and Lecturer}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile}{}{}
+  \cventry{November 2015 -- October 2018}{Ph.D. Student}{Ph.d. Programme Biomedical, Electrical and System Engineering}{Dipartimento
+  di Ingegneria dell’Energia Elettrica e dell’Informazione ``Guglielmo Marconi''}{Università di Bologna}{}
+  \cventry{July 2015 -- October 2015}{Software Developer and Research Assistant}{Instituto Sistemas Complejos de  Ingeniería}{}{}{}
+  \cventry{August 2012 -- September 2015}{Part-time Lecturer}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile}{}{}
+  \cventry{March 2012 -- July 2015}{Part-time Lecturer}{Facultad de Ingeniería}{Universidad Andrés Bello}{}{}
+  \cventry{March 2012 -- December 2012}{Teaching Assistant}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile}{}{}
+  \cventry{August 2011 -- August 2012}{Teaching Assistant}{Facultad de Ingeniería}{Universidad Andrés Bello}{}{}{}
+  \cventry{May 2010 -- February 2011}{System Developer}{Section of Operation and Platform}{Dirección de Informática}{Pontificia Universidad Católica de Chile}{}
+  \cventry{March 2010 -- December 2010}{Teaching Assistant}{Departamento de Ingeniería Metalúrgica}{Universidad de Santiago de Chile}{}{}
+  \cventry{July 2009 -- December 2013}{Research Assistant in Optimization Group}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile}{}{}
+}
+\short{
+}
+{
+\es{
+\section{Docencia}
+  \subsection{Universidad de Concepción}
+    \cventry{2020}{Técnicas Metaheurísticas para la Gestión Sustentable}{Doctorado y Magíster en Ingeniería Industrial}{Departamento de
+    Ingeniería Industrial}{impartidan en 2020-2, conjuntamente con la Prof. Rosa Medina y la Prof. Lorena Pradenas}{}
+    \cventry{2020}{Programación Aplicada a la Ingeniería Industrial}{Ingeniería Civil Industrial}{Departamento de Ingeniería Industrial}{Impartidan en 2020-2}{}
+    \cventry{2020}{Optimización I}{Ingeniería Civil Industrial}{Departamento de Ingeniería Industrial}{impartida en 2020-1, conjuntamente con la Prof. Rosa Medina}{}
+    \cventry{2020}{Modelos Determinísticos en Investigación de Operaciones}{Doctorado y Magíster en Ingeniería Industrial}{Departamento de Ingeniería
+    Industrial}{impartidan en 2020-1, conjuntamente con la Prof. Rosa Medina y la Prof. Lorena Pradenas}{}
+  \subsection{Universidad de Santiago de Chile}
+    \cventry{2019}{Modelos y Algoritmos de Optimización}{Licenciatura en Ciencia de la Computación}{Departamento de Matemática y Ciencia de la
+    Computación}{impartida en 2019-1 y 2019-2}{}
+    \cventry{2015}{Métodos de Programación}{Ingeniería Civil en Informática}{Departamento de Ingeniería en Informática}{impartida en 2015-1}{}
+    \cventry{2012}{Fundamentos de Computación y Programación}{varias Ingenierías de Ejecución y Civil}{Facultad de Ingeniería}{impartida en 2012-2,
+    2013-2, 2014-1, 2014-2, 2015-1 y 2019-1}{}
+    \cventry{2012}{Computación Evolutiva}{Ingeniería Civil en Informática}{Departamento de Ingeniería Informática}{Ayudante en 2012-1 y 2012-2}{}
+    \cventry{2010}{Sistemas de Información y Comunicación}{Ingeniería de Ejecución en Metalurgia}{Departamento de Ingeniería Metalúrgica}{Ayudante en 2010-1 y 2010-2}{}
+  \subsection{Universidad Andrés Bello}
+    \cventry{2014}{Ingeniería de Software II}{Ingeniería Civil en Informática}{Facultad de Ingeniería}{impartida en 2014-2}{}
+    \cventry{2014}{Programación I}{Ingeniería en Computación e Informática}{Facultad de Ingeniería}{impartida en 2014-1 y 2015-1}{}
+    \cventry{2014}{Programación II}{Ingeniería en Computación e Informática}{Facultad de Ingeniería}{Ayudante en 2014-2}{}
+    \cventry{2013}{Análisis y Diseño de Algoritmos}{Ingeniería Civil en Informática}{Facultad de Ingeniería}{impartida en 2013-2}{}
+    \cventry{2013}{Fundamentos de Programación}{Ingeniería Civil Informática}{Facultad de Ingeniería}{impartida en 2013-2 y 2014-2}{}
+    \cventry{2013}{Algoritmos y Estructura de Datos}{Ingeniería Civil Informática}{Facultad de Ingeniería}{impartida en 2013-1 y 2014-1}{}
+    \cventry{2013}{Proyecto de Título I}{Ingeniería en Computación e Informática}{Facultad de Ingeniería}{impartida en 2013-1, 2013-2, 2014-2 y 2015-1}{}
+    \cventry{2013}{Proyecto de Título II}{Ingeniería en Computación e Informática}{Facultad de Ingeniería}{impartida en 2013-1, 2013-2, 2014-1 y 2014-2}{}
+    \cventry{2013}{Estructura de Datos}{Ingeniería en Computación e Informática}{Facultad de Ingeniería}{impartida en 2013-1, 2014-1, 2014-2 y 2015-1}{}
+    \cventry{2013}{Diseño de Algoritmos}{Ingeniería en Computación e Informática}{Facultad de Ingeniería}{impartida en 2013-1, 2013-2, 2014-1 y 2015-1}{}
+    \cventry{2013}{Metodología de Desarrollo de Software}{Ingeniería en Computación e Informática}{Facultad de Ingeniería}{impartida en 2013-1}{}
+    \cventry{2012}{Investigación de Operaciones}{Ingeniería en Computación e Informática}{Facultad de Ingeniería}{impartida en 2012-2}{}
+    \cventry{2012}{Metaheurísticas}{Ingeniería Civil en Informática}{Facultad de Ingeniería}{impartida en 2012-2}{}
+    \cventry{2012}{Tecnologías de la Información}{Ingeniería Civil Industrial}{Facultad de Ingeniería}{impartida en 2012-2}{}
+    \cventry{2011}{Investigación de Operaciones}{Ingeniería en Computación e Informática}{Facultad de Ingeniería}{Ayudante en 2011-2 y 2012-1}{}
+
+}{
+\section{Teaching}
+ \subsection{Universidad de Concepción}
+    \cventry{2020}{Metaheuristic Techniques for Sustainable Management}{Ph.D. and M.Sc. in Industrial Engineering}{Departamento de
+    Ingeniería Industrial}{given in 2020-2, jointly with Prof. Rosa Medina and Prof. Lorena Pradenas}{}
+    \cventry{2020}{Programming Applied to Industrial Engineering}{Industrial Engineering}{Departamento de Ingeniería Industrial}{given in 2020-2}{}
+    \cventry{2020}{Optimization I}{Industrial Engineering}{Departamento de Ingeniería Industrial}{given in 2020-1, jointly with Prof. Rosa Medina}{}
+    \cventry{2020}{Deterministic Models in Operations Research}{Ph.D. and M.Sc. in Industrial Engineering}{Departamento de Ingeniería
+    Industrial}{given in 2020-1, jointly with Prof. Rosa Medina and Prof. Lorena Pradenas}{}
+    \subsection{Universidad de Santiago de Chile}
+    \cventry{2019}{Models and Algorithms for Optimization}{B.Sc. in Computer Science}{Departamento de Matemática y Ciencia de la Computación}{given in 2019-1 and 2019-2}{}
+    \cventry{2015}{Programming Methods}{Computer Science Engineering}{Departamento de Ingeniería en Informática}{given 2015-1}{}
+    \cventry{2012}{Computer Fundamentals and Programming}{Several Engineering}{Facultad de Ingeniería}{given in 2012-2, 2013-2, 2014-1, 2014-2, 2015-1 and 2019-1}{}
+    \cventry{2012}{Evolutionary Computation}{Computer Science Engineering}{Departamento de Ingeniería Informática}{Teaching Assistant in 2012-1 and  2012-2}{}
+    \cventry{2010}{Information and Communication Systems}{Metallurgical Engineering}{Departamento de Ingeniería Metalúrgica}{Teaching Assistant in 2010-1 and 2010-2}{}
+    \subsection{Universidad Andrés Bello}
+    \cventry{2014}{Software Engineering II}{Computer Science Engineering}{Facultad de Ingeniería}{given in 2014-2}{}
+    \cventry{2014}{Programming I}{Computer Science and Informatics Engineering}{Facultad de Ingeniería}{given in 2014-1 and 2015-1}{}
+    \cventry{2014}{Programming II}{Computer Science and Informatics Engineering}{Facultad de Ingeniería}{Ayudante en 2014-2}{}
+    \cventry{2013}{Analysis and Design of Algorithms}{Computer Science Engineering}{Facultad de Ingeniería}{given in 2013-2}{}
+    \cventry{2013}{Programming Fundamentals}{Computer Science Engineering}{Facultad de Ingeniería}{given in 2013-2 and 2014-2}{}
+    \cventry{2013}{Algorithms and Data Structures}{Computer Science Engineering}{Facultad de Ingeniería}{given in 2013-1 and 2014-1}{}
+    \cventry{2013}{Degree Project I}{Computer Science and Informatics Engineering}{Facultad de Ingeniería}{given in 2013-1, 2013-2, 2014-2 and 2015-1}{}
+    \cventry{2013}{Degree Project II}{Computer Science and Informatics Engineering}{Facultad de Ingeniería}{given in 2013-1, 2013-2, 2014-1 and 2014-2}{}
+    \cventry{2013}{Data Structures}{Computer Science and Informatics Engineering}{Facultad de Ingeniería}{given in 2013-1, 2014-1, 2014-2 and 2015-1}{}
+    \cventry{2013}{Algorithms Design}{Computer Science and Informatics Engineering}{Facultad de Ingeniería}{given in 2013-1, 2013-2, 2014-1 and 2015-1}{}
+    \cventry{2013}{Software Development Methodologies}{Computer Science and Informatics Engineering}{Facultad de Ingeniería}{given in 2013-1}{}
+    \cventry{2012}{Operations Research}{Computer Science and Informatics Engineering}{Facultad de Ingeniería}{given in 2012-2}{}
+    \cventry{2012}{Metaheuristics}{Computer Science Engineering}{Facultad de Ingeniería}{given in 2012-2}{}
+    \cventry{2012}{Information Technology}{Industrial Engineering}{Facultad de Ingeniería}{given in 2012-2}{}
+    \cventry{2011}{Operations Research}{Computer Science and Informatics Engineering}{Facultad de Ingeniería}{Teaching Assistant 2011-2 and 2012-1}{}
+}
+}
+\es{
+%% \newpage
+  \section{Premios y reconocimientos}
+  \cventry{noviembre 2015}{Beca Doctorado en el extranjero - Beca Chile
+    2015}{Comisión Nacional de Investigación Científica y Tecnológica
+    (CONICYT)}{}{}{Beca para realizar estudios conducentes a la obtención del
+    grado académico de Doctor en instituciones de excelencia en el exterior.}
+  \cventry{julio 2013}{Google Scholars' Retreat}{Google}{}{}{Como becario de
+    Google Latam me invitaron a la oficina de Google en Nueva York con otros
+    becarios de América Latina y EE.UU. para celebrar los logros, interactuar
+    con otros estudiosos, y escuchar charlass de los ingenieros de  Google.}
+  \cventry{marzo 2013}{Google USACH Scholarship}{Google}{}{}{Premiado con la
+    beca Google en el marco del convenio Google University Programs que busca
+    recompensar a estudiantes de diversos orígenes para incentivar la
+    excelencia en los estudios y promover que se conviertan en modelos de rol y
+    líderes activos en el campo de la ingeniería informática.}
+}{
+  \section{Honors and awards}
+  \cventry{November 2015}{Ph.D. scholarship abroad - Beca Chile 2015}{Comisión
+    Nacional de Investigación Científica y Tecnológica
+    (CONICYT)}{}{}{Scholarship for studies leading to the award of the academic
+    degree of Doctor of institutions of excellence abroad.}
+  \cventry{July 2013}{Google Scholars' Retreat}{Google}{}{}{As a Google Latam
+    scholarship recipient I was invited to a Google office in NYC with other
+    recipients from Latin America and USA to celebrate accomplishments,
+    interact with fellow scholars, and hear talks from Google engineers.}
+  \cventry{March 2013}{Google Latin America Scholarship}{Google}{}{}{Scholarships awarded
+    based on the strength of academic background and demonstrated passion for
+    Computer Science.}
+}
+\short
+{
+}{
+\es{
+  \section{Asistencias a escuelas}
+  \cventry{enero 2017}{Winter School on Network Optimization $6^{th}$ edition}{Centro de Matemática,
+    Aplicações Fundamentais e Investigação Operacional}{Faculdade de Ciências, Universidade de
+    Lisboa}{Estoril, Portugal}{Conferencias de Ángel Corberán, Arie Koster, Gerhard Reinelt, Giovanni
+    Rinaldi y José Valério de Carvalho.}
+
+  \cventry{agosto 2016}{Prague Summer Schools on Discrete Mathematics}{Mathematical Institute of the
+    Czech Academy of Sciences and Computer Science Institute of Charles University}{}{Praga, República
+    Checa}{Conferencias de Ronald de Wolf y Samuel Fiorini.}
+
+  \cventry{junio 2016}{COST/MINO Ph.D. School on Advanced Optimization Methods 2016}{Istituto di Analisi
+    dei Sistemi ed Informatica ``A. Ruberti''}{Consiglio Nazionale delle Ricerche}{Roma,
+    Italia}{Conferencias de Santanu S. Dey, Jordi Castro, Antonio Frangioni y Veronica Piccialli.}
+}
+{
+  \section{Schools attended}
+  \cventry{January 2017}{Winter School on Network Optimization $6^{th}$ edition}{Centro de Matemática,
+    Aplicações Fundamentais e Investigação Operacional}{Faculdade de Ciências, Universidade de
+    Lisboa}{Estoril, Portugal}{Lectures by Ángel Corberán, Arie Koster, Gerhard Reinelt, Giovanni
+    Rinaldi and José Valério de Carvalho.}
+
+  \cventry{August 2016}{Prague Summer Schools on Discrete Mathematics}{Mathematical Institute of the
+    Czech Academy of Sciences and Computer Science Institute of Charles University}{}{Prague, Czech
+    Republic}{Lectures by Ronald de Wolf and Samuel Fiorini.}
+
+  \cventry{June 2016}{COST/MINO Ph.D. School on Advanced Optimization Methods 2016}{Istituto di Analisi
+    dei Sistemi ed Informatica ``A. Ruberti''}{Consiglio Nazionale delle Ricerche}{Roma,
+    Italy}{Lectures by Santanu S. Dey, Jordi Castro, Antonio Frangioni and Veronica Piccialli.}
+}
+
+\es
+{
+  \section{Posiciones de visitante}
+  \cventry{diciembre 2018}{Universidad del Bío-Bío}{}{}{}{Investigador Visitante en el Departmento de
+    Industrial Engineering Ingeniería Industrial. Trabajando con Rodrigo Linfati.}
+}
+{
+  \section{Visiting positions}
+  \cventry{December 2018}{Universidad del Bío-Bío}{}{}{}{Visiting Researcher at the Department of
+    Industrial Engineering. Working with Rodrigo Linfati.}
+}
+
+\es
+{
+  \section{Charlas invitadas}
+  \cventry{diciembre 2018}{``Algorithms for Variants of Routing Problems''}{}{}{}{Universidad de
+    Santiago de Chile, Departamento de Matemática y Ciencia de la Computación.}
+}
+{
+  \section{Invited talks}
+  \cventry{December 2018}{``Algorithms for Variants of Routing Problems''}{}{}{}{Universidad de
+    Santiago de Chile, Department of Mathematics and Computer Science.}
+}
+
+\es
+{
+  \section{Miembro de comités}
+  \cventry{2018}{Miembro del comité de Organización}{}{}{}{EURO/ALIO International Conference 2018 on Applied Combinatorial Optimization, Bologna,
+  Italia}
+  \cventry{2020}{Miembro del comité Científico}{}{}{}{International Conference of Production Research, ICPR - Americas 2020, Bahía Blanca, Argentina}
+}
+{
+  \section{Academic duties}
+  \cventry{2018}{Member of the Organizing Committee}{}{}{}{EURO/ALIO International Conference 2018 on Applied Combinatorial Optimization, Bologna,
+  Italy}
+  \cventry{2020}{Member of the Scientific Committee}{}{}{}{International Conference of Production Research, ICPR - Americas 2020, Bahía Blanca, Argentina}
+}
+
+\es{
+%% \newpage
+  \section{Afiliaciones}
+  %% \cventry{marzo 2012 -- a la fecha}{s}{s}{s}{s}
+  \cventry{septiembre 2016 -- a la fecha}{Associazione Italiana di Ricerca Operativa (AIRO)}{Miembro}{}{}{}
+  \cventry{marzo 2012 -- a la fecha}{Instituto Chileno de Investigación de
+    Operaciones (ICHIO)}{Miembro}{}{}{}
+  \cventry{agosto 2008 -- marzo 2015}{POS RIZOMA COMERCIO}{Proyecto de Software
+    Libre}{Software de Gestión de Pymes}{Desarrollador}{}
+}
+{
+  \section{Affiliations}
+  \cventry{September 2016 -- Present}{Associazione Italiana di Ricerca Operativa (AIRO)}{Italian Operations Research Society}{Member}{}{}
+  \cventry{March 2012 -- Present}{Instituto Chileno de Investigación de
+    Operaciones (ICHIO)}{Chilean Operations Research Society}{Member}{}{}
+  \cventry{August 2008 -- March 2015}{POS RIZOMA COMERCIO}{Project of Free Software}{SMEs Management Software}{Developer}{}
+}
+
+% \newpage
+\es
+{
+  \section{Conocimientos técnicos}
+  % \section{Computer skills}
+  \cventry{Lenguajes de Programación y Bibliotecas}{C/C++, Java,
+    Python, Julia, HTML, Gtk, MPI, OpenMP, Pthreads}{Conocimientos avanzados}{\newline
+    \textbf{PHP, JSP, Bash, Perl}, Conocimientos medios}{\newline \textbf{Ruby,
+      Django, Javascript}, Conocimientos básicos}{}
+  \cventry{Software Científico}{\LaTeX{}}{Conocimientos avanzados}{\newline \textbf{Maple,
+      Octave, Matlab, R, Cplex, AMPL}}{Conocimientos medios}{}
+  \cventry{Sistemas Operativos}{GNU/Linux, Microsoft Windows}{Conocimientos
+    avanzados}{}{}{}
+  \cventry{Ofimática}{Microsoft Office}{Uso de Word, Excel, Power
+    Point, Acces y programación en macros de excel}{\newline{}
+    \textbf{OpenOffice/LibreOffice}} {Uso de Write, Calc, Impress y programación en macros
+    de calc}{}
+  \cventry{Bases de Datos}{PostgresSQL, Mysql, Sqlite, Oracle}{Manipulación de
+    estas, programación de procedimientos almacenados, funciones y triggers }{}{}{}
+  %% \cventry{Sistema de gestión de contenido}{Worpress, Joomla, Moodle}{Uso y
+  %%   conocimientos medios}{}{}{}
+}
+{
+%% \newpage
+  \section{Computer skills}
+  \cventry{Programming Languages and Libraries}{C/C++, Java, Python, Julia, Gtk, MPI,
+    OpenMP, Pthreads, HTML, PHP, JSP, Bash, Perl, Ruby, Django, Javascript}{}{}{}{}
+  \cventry{Scientific Software}{LaTeX, Matlab, Octave, Maple, R, Cplex, AMPL}{}{}{}{}
+  \cventry{OS}{GNU/Linux, Microsoft Windows}{}{}{}{}{}
+  \cventry{Office suite}{OpenOffice/LibreOffice/Microsoft Office}{}{}{}{}
+  \cventry{Database}{PostgresSQL, Mysql, Sqlite, Oracle}{}{}{}{}
+  %% \cventry{CMS}{Worpress, Joomla, Moodle}{}{}{}{}
+}
+
+\es{
+  \section{Afiliaciones}
+  %% \cventry{marzo 2012 -- a la fecha}{s}{s}{s}{s}
+  \cventry{septiembre 2016 -- a la fecha}{Associazione Italiana di Ricerca Operativa (AIRO)}{Miembro}{}{}{}
+  \cventry{marzo 2012 -- a la fecha}{Instituto Chileno de Investigación de
+    Operaciones (ICHIO)}{Miembro}{}{}{}
+  %% \cventry{marzo 2011 -- a la fecha}{Beca de Investigación}{Magíster en
+  %% Ingeniería Informática}{Grupo de Optimización}{Facultad de Ingeniería,
+  %% Departamento de Informática, Universidad de Santiago de Chile}{}
+  \cventry{agosto 2008 -- a la fecha}{POS RIZOMA COMERCIO}{Proyecto de Software
+    Libre}{Software de Gestión de Pymes}{Desarrollador}{}
+}
+{
+  \section{Affiliations}
+  \cventry{September 2016 -- Present}{Associazione Italiana di Ricerca Operativa (AIRO)}{Italian Operations Research Society}{Member}{}{}
+  \cventry{March 2012 -- Present}{Instituto Chileno de Investigación de
+    Operaciones (ICHIO)}{Chilean Operations Research Society}{Member}{}{}
+  \cventry{August 2008 -- Present}{POS RIZOMA COMERCIO}{Project of Free Software}{SMEs Management Software}{Developer}{}
+}
+}
+\short
+{
+}{
+\es{
+  \section{Idiomas}
+  \cventry{Español}{Lengua materna}{}{}{}{}
+  \cventry{Inglés}{Bueno}{}{}{}{}
+  \cventry{Italiano}{Bueno}{}{}{}{}
+}
+{
+  \section{Languages}
+  \cventry{Spanish}{Mother tongue}{}{}{}{}
+  \cventry{English}{Good}{}{}{}{}
+  \cventry{Italian}{Good}{}{}{}{}
+}
+}
+
+%%Journals
+\newcommand{\EJOR}{\href{https://www.journals.elsevier.com/european-journal-of-operational-research}{European Journal of Operational Research}}
+\newcommand{\INS}{\href{https://www.journals.elsevier.com/information-sciences}{Information Sciences}}
+\newcommand{\EXSY}{\href{https://onlinelibrary.wiley.com/journal/14680394}{Expert Systems}}
+\newcommand{\IEI}{\href{https://revistas.unal.edu.co/index.php/ingeinv}{Ingeniería e Investigación}}
+
+\es {
+%% \newpage
+   \section{Actividades de revisión}
+   \cventry{Artículos de revistas}{\EJOR{}, \EXSY{}, \INS{} y \IEI{}}{}{}{}{}
+}{
+   \section{Peer review activities}
+   \cventry{Journal articles}{\EJOR{}, \EXSY{}, \INS{} and \IEI{}}{}{}{}{}
+}
+
+\closesection{}                   % needed to renewcommands
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+\newread\file
+\openin\file=citations.txt
+\read\file to\totalGoogle
+\read\file to\fiveYearsGoogle
+\read\file to\citationGoogle
+\read\file to\HindexGoogle
+\read\file to\totalWos
+\read\file to\fiveYearsWos
+\read\file to\citationWOS
+\read\file to\HindexWOS
+\read\file to\totalScopus
+\read\file to\fiveYearsScopus
+\read\file to\citationScopus
+\read\file to\HindexScopus
+\read\file to\totalRG
+\read\file to\fiveYearsRG
+\read\file to\citationRG
+\read\file to\HindexRG
+\closein\file
+
+\es{
+%% \newpage
+  \section{Publicaciones}
+    \aiGoogleScholar ~\href{https://scholar.google.es/citations?user=hIl4ixAAAAAJ\&hl}{Google Scholar} ~~~~~~
+  --~total de artículos: \totalGoogle{} citas: \citationGoogle{} Índice h: \HindexGoogle{} artículos en 5 años: \fiveYearsGoogle{}\\
+    \aiPublons ~\href{https://publons.com/researcher/1711633}{publons} -- \href{https://app.webofknowledge.com/author/\#/record/5462071}{WOS} ~~~~~
+  --~total de artículos: \totalWos{} citas: \citationWOS{} Índice h: \HindexWOS{} artículos en 5 años: \fiveYearsWos{}\\
+    \aiMendeley ~\href{https://www.mendeley.com/profiles/carlos-contreras-bolton/}{Mendeley} -- \href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{Scopus} ~
+  --~total de artículos: \totalScopus{} citas: \citationScopus{} Índice h: \HindexScopus{} artículos en 5 años: \fiveYearsScopus{}\\
+    \aiResearchGate ~\href{https://www.researchgate.net/profile/Carlos\_Contreras\_Bolton}{ResearchGate} ~~~~~~~~
+  --~total de artículos: \totalRG{} citas: \citationRG{} Índice h: \HindexRG{} artículos en 5 años: \fiveYearsRG{}
+}{
+  \section{Publications}
+    \aiGoogleScholar ~\href{https://scholar.google.es/citations?user=hIl4ixAAAAAJ\&hl}{Google Scholar} ~~~~~~
+  --~total articles: \totalGoogle{} citations: \citationGoogle{} h-index: \HindexGoogle{} articles in 5-years: \fiveYearsGoogle{}\\
+    \aiPublons ~\href{https://publons.com/researcher/1711633}{publons} -- \href{https://app.webofknowledge.com/author/\#/record/5462071}{WOS} ~~~~~
+  --~total articles: \totalWos{} citations: \citationWOS{} h-index: \HindexWOS{} articles in 5-years: \fiveYearsWos{}\\
+    \aiMendeley ~\href{https://www.mendeley.com/profiles/carlos-contreras-bolton/}{Mendeley} -- \href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{Scopus} ~
+  --~total articles: \totalScopus{} citations: \citationScopus{} h-index: \HindexScopus{} articles in 5-years: \fiveYearsScopus{}\\
+    \aiResearchGate ~\href{https://www.researchgate.net/profile/Carlos\_Contreras\_Bolton}{ResearchGate} ~~~~~~~~
+  --~total articles: \totalRG{} citations: \citationRG{} h-index: \HindexRG{} articles in 5-years: \fiveYearsRG{}
+}
+
+
+\short
+{
+}{
+\nociteSometido{*}
+\es{\bibliographystyleSometido{spanish}}{\bibliographystyleSometido{english}}
+\bibliographySometido{publicacionesSometido}                   % 'publications' es el
+
+\nociteRevista{*}
+\es{\newpage\bibliographystyleRevista{spanish}}{\bibliographystyleRevista{english}}
+\bibliographyRevista{publicacionesRevista}                   % 'publications' es el
+% nombre del archivo BibTeX
+
+\nociteLibro{*}
+\es{\bibliographystyleLibro{spanish}}{\bibliographystyleLibro{english}}
+\bibliographyLibro{publicacionesLibro}
+
+\nociteProceeding{*}
+\es{\bibliographystyleProceeding{spanish}}{\bibliographystyleProceeding{english}}
+\bibliographyProceeding{publicacionesProceeding}
+
+\nociteConferencia{*}
+\es{\bibliographystyleConferencia{spanish}}{\bibliographystyleConferencia{english}}
+\bibliographyConferencia{publicacionesConferencia}      % 'publications'
+%% es el nombre del archivo BibTeX
+}
+
+
+\end{document}
