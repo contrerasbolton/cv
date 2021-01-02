@@ -2,24 +2,6 @@
 #
 # Carlos Contreras Bolton
 # Script para latex CV
-# rm *~
-# bibtex Proceeding.aux;
-# bibtex Revista.aux;
-# bibtex Conferencia.aux;
-# read -n 1 c
-# lualatex CV_en.tex;lualatex CV_en.tex;
-# bibtex Proceeding.aux;
-# bibtex Revista.aux;
-# bibtex Conferencia.aux;
-# lualatex CV_en.tex;lualatex CV_en.tex;
-# bibtex Proceeding.aux;
-# bibtex Revista.aux;
-# bibtex Conferencia.aux;
-# lualatex CV.tex;lualatex CV.tex;
-# bibtex Proceeding.aux;
-# bibtex Revista.aux;
-# bibtex Conferencia.aux;
-# lualatex CV.tex;lualatex CV.tex;
 rm *~
 bibtex Sometido.aux;
 bibtex Revista.aux;
