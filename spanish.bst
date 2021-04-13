@@ -320,7 +320,7 @@ MACRO {nov} {"Noviembre"}
 
 MACRO {dec} {"Diciembre"}
 
-MACRO {scopus} {"\href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{Indexada en Scopus}"}
+MACRO {scopus} {"\href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{{Indexada en Scopus}}"}
 
 MACRO {isi} {"\href{https://publons.com/researcher/1711633/carlos-contreras-bolton/publications/}{Indexada en WoS}"}
 
@@ -343,6 +343,8 @@ MACRO {rabat} {"Rabat, Marruecos"}
 MACRO {amsterdam} {"Amsterdam, Holanda"}
 
 MACRO {rio} {"Río de Janeiro, Brasil"}
+
+MACRO {saopaulo} {"Sao Paulo, Brasil"}
 
 MACRO {tunez} {"Djerba Island, Túnez"}
 

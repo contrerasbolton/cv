@@ -346,6 +346,8 @@ MACRO {amsterdam} {"Amsterdam, Netherlands"}
 
 MACRO {rio} {"Río de Janeiro, Brazil"}
 
+MACRO {saopaulo} {"Sao Paulo, Brazil"}
+
 MACRO {tunez} {"Djerba Island, Tunisia"}
 
 MACRO {stuttgart} {"Stuttgart, Germany"}

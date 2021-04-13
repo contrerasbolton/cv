@@ -10,15 +10,21 @@
 % moderncv themes
 \moderncvtheme{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
 % \moderncvtheme[green]{classic}                % idem
+\usepackage{fontawesome}
+\usepackage{luatexbase}
+\usepackage{microtype}
+
 \usepackage[utf8]{inputenc}                   % replace by the encoding you are using
 \usepackage[english, spanish]{babel}
 \usepackage{datetime}
 \usepackage[numbers]{natbib}
 \usepackage[resetlabels]{multibib}
 % adjust the page margins
+\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 \usepackage[scale=0.8]{geometry}
 \usepackage{gensymb}
 \usepackage{footmisc} % enabling footnotes.
+
 \usepackage{academicons}
 
 \usepackage{etoolbox}
@@ -76,10 +82,10 @@
 }
 
 \es{
-  \newcites{Sometido,Revista,Libro,Proceeding,Conferencia}{{Artículos de Revistas Científicas Sometidos (Bajo Revisión)},{Artículos de Revistas Científicas},{Capítulos de Libros},{Conferencias Indexadas},{Otras Conferencias y Charlas Internacionales}}
+  \newcites{Sometido,Revista,Libro,Proceeding,Conferencia}{{Artículos Sometidos en Revistas Científicas (Bajo Revisión)},{Artículos en Revistas Científicas},{Capítulos de Libros},{Conferencias Indexadas},{Otras Conferencias y Charlas Internacionales}}
 }
 {
-  \newcites{Sometido,Revista,Libro,Proceeding,Conferencia}{{Journal Articles Submitted (Under Review)},{Journal Articles},{Books Chapters},{Proceedings of Indexed Conferences},{Other International Conferences and Talks}}
+  \newcites{Sometido,Revista,Libro,Proceeding,Conferencia}{{Journal Articles Submitted (Under Revision)},{Journal Articles},{Books Chapters},{Proceedings of Indexed Conferences},{Other International Conferences and Talks}}
 }
 
 % ----------------------------------------------------------------------------------
@@ -97,6 +103,54 @@
 \familyname{Publications$\qquad\qquad$}
 }
 \maketitle
+
+\closesection{}                   % needed to renewcommands
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+
+\newread\file
+\openin\file=citations.txt
+\endlinechar-1%<- this removes the space at the end of each read line
+\read\file to\totalGoogle
+\read\file to\fiveYearsGoogle
+\read\file to\citationGoogle
+\read\file to\HindexGoogle
+\read\file to\totalWOS
+\read\file to\fiveYearsWOS
+\read\file to\citationWOS
+\read\file to\HindexWOS
+\read\file to\totalScopus
+\read\file to\fiveYearsScopus
+\read\file to\citationScopus
+\read\file to\HindexScopus
+\read\file to\totalRG
+\read\file to\fiveYearsRG
+\read\file to\citationRG
+\read\file to\HindexRG
+\closein\file
+%% \endgroup
+\es{
+%% \newpage
+  \section{Métricas de publicación}
+     \cvitem{\aiGoogleScholar}{\href{https://scholar.google.es/citations?user=hIl4ixAAAAAJ\&hl}{Google Scholar}
+             ~~~~artículos (\totalGoogle{}), citas (\citationGoogle{}), índice h (\HindexGoogle{}), artículos en 5 años (\fiveYearsGoogle{}).}
+     \cvitem{\aiPublons}{\href{https://publons.com/researcher/1711633}{Publons}--\href{https://app.webofknowledge.com/author/\#/record/5462071}{WOS}
+             ~~~~~artículos (\totalWOS{}), citas (\citationWOS{}), índice h (\HindexWOS{}), artículos en 5 años (\fiveYearsWOS{}).}
+     \cvitem{\aiElsevier}{\href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{Elsevier--Scopus}
+             ~~~artículos (\totalScopus{}), citas (\citationScopus{}), índice h (\HindexScopus{}), artículos en 5 años (\fiveYearsScopus{}).}
+     \cvitem{\aiResearchGate}{\href{https://www.researchgate.net/profile/Carlos\_Contreras\_Bolton}{ResearchGate}
+             ~~~~~~artículos (\totalRG{}), citas (\citationRG{}), índice h (\HindexRG{}), artículos en 5 años (\fiveYearsRG{}).}
+}{
+  \section{Publication metrics}
+     \cvitem{\aiGoogleScholar}{\href{https://scholar.google.es/citations?user=hIl4ixAAAAAJ\&hl}{Google Scholar}
+             ~~~~articles (\totalGoogle{}), citations (\citationGoogle{}), h-index (\HindexGoogle{}), articles in 5-years (\fiveYearsGoogle{}).}
+     \cvitem{\aiPublons}{\href{https://publons.com/researcher/1711633}{Publons}--\href{https://app.webofknowledge.com/author/\#/record/5462071}{WOS}
+             ~~~~articles (\totalWOS{}), citations (\citationWOS{}), h-index (\HindexWOS{}), articles in 5-years (\fiveYearsWOS{}).}
+     \cvitem{\aiElsevier}{\href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{Elsevier--Scopus}
+             ~~articles (\totalScopus{}), citations (\citationScopus{}), h-index (\HindexScopus{}), articles in 5-years (\fiveYearsScopus{}).}
+     \cvitem{\aiResearchGate}{\href{https://www.researchgate.net/profile/Carlos\_Contreras\_Bolton}{ResearchGate}
+             ~~~~~articles (\totalRG{}), citations (\citationRG{}), h-index (\HindexRG{}), articles in 5-years (\fiveYearsRG{}).}
+}
 
 \nociteSometido{*}
 \es{\bibliographystyleSometido{spanish}}{\bibliographystyleSometido{english}}
