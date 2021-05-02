@@ -20,7 +20,7 @@
 \usepackage[numbers]{natbib}
 \usepackage[resetlabels]{multibib}
 % adjust the page margins
-\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+\setlength{\hintscolumnwidth}{3.2cm}                % if you want to change the width of the column with the dates
 \usepackage[scale=0.8]{geometry}
 \usepackage{gensymb}
 \usepackage{footmisc} % enabling footnotes.
@@ -38,17 +38,18 @@
   \hypersetup{colorlinks,linkcolor=,urlcolor=links}
 }
 
-
+\newcommand{\AddressOfficial}{Edmundo Larenas 219, Concepción 4070409, Chile}
+\newcommand{\correo}{carlos.contreras.b@udec.cl}
 % personal data
-\firstname{}
-\familyname{}
+%% \firstname{}
+%% \familyname{}
 % \title{Resumé title (optional)}               % optional, remove the line if not wanted
-\address{}{}    % optional, remove the line if not wanted
+\address{\AddressOfficial}{}    % optional, remove the line if not wanted
 % \mobile{mobile (optional)}                    % optional, remove the line if not wanted
 
 % \phone{+39 3387479471}                      % optional, remove the line if not wanted
 % \fax{fax (optional)}                          % optional, remove the line if not wanted
-%\email{}             % optional, remove / comment the line if not wanted
+\email{\correo}             % optional, remove / comment the line if not wanted
 % \extrainfo{additional information (optional)} % optional, remove the line if not wanted
 % \photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
 % \quote{"They can kill you, but the legalities of eating you are quite a bit dicier" - David Foster Wallace}                 % optional, remove the line if not wanted
@@ -67,9 +68,11 @@
 \DeclareRobustCommand*\cal{\@fontswitch\relax\mathcal}
 \DeclareRobustCommand*\mit{\@fontswitch\relax\mathnormal}
 
-
 \newtoggle{es}
 \newcommand{\es}[2]{\iftoggle{es}{#1}{#2}}
+
+\newtoggle{short}
+\newcommand{\short}[2]{\iftoggle{short}{#1}{#2}}
 
 \ifthenelse{\equal{\detokenize{pub_es}}{\jobname}}{
   \toggletrue{es}
@@ -81,18 +84,18 @@
   \togglefalse{es}
 }
 
+\ifthenelse{\equal{\detokenize{shortCV_en}}{\jobname}}{
+  \toggletrue{short}
+}{
+  \togglefalse{short}
+}
+
 \es{
   \newcites{Sometido,Revista,Libro,Proceeding,Conferencia}{{Artículos Sometidos en Revistas Científicas (Bajo Revisión)},{Artículos en Revistas Científicas},{Capítulos de Libros},{Conferencias Indexadas},{Otras Conferencias y Charlas Internacionales}}
 }
 {
   \newcites{Sometido,Revista,Libro,Proceeding,Conferencia}{{Journal Articles Submitted (Under Revision)},{Journal Articles},{Books Chapters},{Proceedings of Indexed Conferences},{Other International Conferences and Talks}}
 }
-
-% ----------------------------------------------------------------------------------
-% content
-% ----------------------------------------------------------------------------------
-\begin{document}
-%% BibTeX file
 \es{
 %% \section{Publicaciones}
 \firstname{}
@@ -102,12 +105,56 @@
 \firstname{}
 \familyname{Publications$\qquad\qquad$}
 }
+% ----------------------------------------------------------------------------------
+% content
+% ----------------------------------------------------------------------------------
+\begin{document}
 \maketitle
+\es {
+  \section{Información de contacto}
+  {\bf Carlos Contreras Bolton}\\
+  {\bf Profesor Asistente}\\
+  Departamento de Ingeniería Industrial\\%\footnotemark[1]\\
+  Universidad de Concepción\\
+  \AddressOfficial
+}{
+  \section{Contact information}
+  {\bf Carlos Contreras Bolton}\\
+  {\bf Assistant Professor}\\
+  Departamento de Ingeniería Industrial \\%\footnotemark[1]\\
+  Universidad de Concepción\\
+  \AddressOfficial
+}
+
+
+%% Journals
+\newcommand{\EJOR}{\href{https://www.journals.elsevier.com/european-journal-of-operational-research}{European Journal of Operational Research}}
+\newcommand{\INS}{\href{https://www.journals.elsevier.com/information-sciences}{Information Sciences}}
+\newcommand{\EXSY}{\href{https://onlinelibrary.wiley.com/journal/14680394}{Expert Systems}}
+\newcommand{\IEI}{\href{https://revistas.unal.edu.co/index.php/ingeinv}{Ingeniería e Investigación}}
+\newcommand{\ITOR}{\href{https://onlinelibrary.wiley.com/journal/14753995}{International Transactions in Operational Research}}
+%% Conferences
+\newcommand{\ICPR}{International Conference of Production Research -- Americas 2020 (ICPR)}
+
+%% format
+\newcommand{\journals}[1]{\EJOR{} (4), \EXSY{} (2), \INS{} (2), \ITOR{} (1) {#1} \IEI{} (1).}
+\newcommand{\conferences}{\ICPR{} (1).}
+\es {
+%% \newpage
+   \section{Actividades de revisión}
+   \cvitem{Artículos de revistas}{\journals{y}}
+   \cvitem{Artículos de conferencias}{\conferences{}}
+}{
+   \section{Peer review activities}
+   \cvitem{Journal articles}{\journals{and}}
+   \cvitem{Conference articles}{\conferences{}}
+}
 
 \closesection{}                   % needed to renewcommands
 \renewcommand{\listitemsymbol}{-} % change the symbol for lists
 
-
+%% \begingroup
+{
 \newread\file
 \openin\file=citations.txt
 \endlinechar-1%<- this removes the space at the end of each read line
@@ -135,7 +182,7 @@
      \cvitem{\aiGoogleScholar}{\href{https://scholar.google.es/citations?user=hIl4ixAAAAAJ\&hl}{Google Scholar}
              ~~~~artículos (\totalGoogle{}), citas (\citationGoogle{}), índice h (\HindexGoogle{}), artículos en 5 años (\fiveYearsGoogle{}).}
      \cvitem{\aiPublons}{\href{https://publons.com/researcher/1711633}{Publons}--\href{https://app.webofknowledge.com/author/\#/record/5462071}{WOS}
-             ~~~~~artículos (\totalWOS{}), citas (\citationWOS{}), índice h (\HindexWOS{}), artículos en 5 años (\fiveYearsWOS{}).}
+             ~~~~artículos (\totalWOS{}), citas (\citationWOS{}), índice h (\HindexWOS{}), artículos en 5 años (\fiveYearsWOS{}).}
      \cvitem{\aiElsevier}{\href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{Elsevier--Scopus}
              ~~~artículos (\totalScopus{}), citas (\citationScopus{}), índice h (\HindexScopus{}), artículos en 5 años (\fiveYearsScopus{}).}
      \cvitem{\aiResearchGate}{\href{https://www.researchgate.net/profile/Carlos\_Contreras\_Bolton}{ResearchGate}
@@ -143,18 +190,22 @@
 }{
   \section{Publication metrics}
      \cvitem{\aiGoogleScholar}{\href{https://scholar.google.es/citations?user=hIl4ixAAAAAJ\&hl}{Google Scholar}
-             ~~~~articles (\totalGoogle{}), citations (\citationGoogle{}), h-index (\HindexGoogle{}), articles in 5-years (\fiveYearsGoogle{}).}
+             ~~~articles (\totalGoogle{}), citations (\citationGoogle{}), h-index (\HindexGoogle{}), articles in 5-years (\fiveYearsGoogle{}).}
      \cvitem{\aiPublons}{\href{https://publons.com/researcher/1711633}{Publons}--\href{https://app.webofknowledge.com/author/\#/record/5462071}{WOS}
-             ~~~~articles (\totalWOS{}), citations (\citationWOS{}), h-index (\HindexWOS{}), articles in 5-years (\fiveYearsWOS{}).}
+             ~~~articles (\totalWOS{}), citations (\citationWOS{}), h-index (\HindexWOS{}), articles in 5-years (\fiveYearsWOS{}).}
      \cvitem{\aiElsevier}{\href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{Elsevier--Scopus}
              ~~articles (\totalScopus{}), citations (\citationScopus{}), h-index (\HindexScopus{}), articles in 5-years (\fiveYearsScopus{}).}
      \cvitem{\aiResearchGate}{\href{https://www.researchgate.net/profile/Carlos\_Contreras\_Bolton}{ResearchGate}
              ~~~~~articles (\totalRG{}), citations (\citationRG{}), h-index (\HindexRG{}), articles in 5-years (\fiveYearsRG{}).}
 }
+}
 
+\short
+{
+}{
 \nociteSometido{*}
-\es{\bibliographystyleSometido{spanish}}{\bibliographystyleSometido{english}}
-\bibliographySometido{publicacionesSometido}                   % 'publications' es el
+%%\es{\bibliographystyleSometido{spanish}}{\bibliographystyleSometido{english}}
+%%\bibliographySometido{publicacionesSometido}                   % 'publications' es el
 
 \nociteRevista{*}
 \es{\bibliographystyleRevista{spanish}}{\bibliographystyleRevista{english}}
@@ -172,5 +223,7 @@
 \nociteConferencia{*}
 \es{\bibliographystyleConferencia{spanish}}{\bibliographystyleConferencia{english}}
 \bibliographyConferencia{publicacionesConferencia}      % 'publications'
+%% es el nombre del archivo BibTeX
+}
 
 \end{document}
