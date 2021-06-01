@@ -360,6 +360,8 @@ MACRO {curitiba} {"Curitiba, Brasil"}
 
 MACRO {montreal} {"Montreal, Canadá"}
 
+MACRO {seoul} {"Seúl, Corea"}
+
 MACRO {submitted} {"bajo revisión"}
 
 MACRO {appear} {"por aparecer"}

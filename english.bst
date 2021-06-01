@@ -362,6 +362,8 @@ MACRO {curitiba} {"Curitiba, Brazil"}
 
 MACRO {montreal} {"Montreal, Canada"}
 
+MACRO {seoul} {"Seoul, Korea"}
+
 MACRO {submitted} {"{\bf under revision}"}
 
 MACRO {appear} {"to appear"}
