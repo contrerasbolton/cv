@@ -1,0 +1,139 @@
+% Copyright 2010 Carlos Contreras Bolton (ccontreras.bolton@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\hyphenpenalty=5000
+\tolerance=1000
+\documentclass[11pt,a4paper]{moderncv}
+% moderncv themes
+\moderncvtheme{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+% \moderncvtheme[green]{classic}                % idem
+\usepackage{fontawesome}
+\usepackage{luatexbase}
+\usepackage{microtype}
+
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+\usepackage[english, spanish]{babel}
+\usepackage{datetime}
+\usepackage[numbers]{natbib}
+\usepackage[resetlabels]{multibib}
+% adjust the page margins
+\setlength{\hintscolumnwidth}{3.2cm}                % if you want to change the width of the column with the dates
+\usepackage[scale=0.8]{geometry}
+\usepackage{gensymb}
+\usepackage{footmisc} % enabling footnotes.
+
+\usepackage{academicons}
+
+\usepackage{etoolbox}
+\usepackage{ifthen}
+
+\recomputelengths                             % required when changes are made to page layout lengths
+\AtBeginDocument{
+  %% \hypersetup{pdfborder = 0 0 1,linkcolor=blue}
+  %% \definecolor{links}{HTML}{2A1B81}
+  \definecolor{links}{rgb}{0.22,0.45,0.70}% light blue
+  \hypersetup{colorlinks,linkcolor=,urlcolor=links}
+}
+
+\newcommand{\AddressOfficial}{Edmundo Larenas 219, Concepción 4070409, Chile}
+\newcommand{\correo}{carlos.contreras.b@udec.cl}
+% personal data
+%% \firstname{}
+%% \familyname{}
+% \title{Resumé title (optional)}               % optional, remove the line if not wanted
+\address{\AddressOfficial}{}    % optional, remove the line if not wanted
+% \mobile{mobile (optional)}                    % optional, remove the line if not wanted
+
+% \phone{+39 3387479471}                      % optional, remove the line if not wanted
+% \fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{\correo}             % optional, remove / comment the line if not wanted
+% \extrainfo{additional information (optional)} % optional, remove the line if not wanted
+% \photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+% \quote{"They can kill you, but the legalities of eating you are quite a bit dicier" - David Foster Wallace}                 % optional, remove the line if not wanted
+
+% \nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+\newcommand\mybitem[1]{%
+  \parbox[t]{3mm}{\textbullet}\parbox[t]{14cm}{#1}\\[1.6mm]}
+
+\DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
+\DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+\DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+\DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
+\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+\DeclareRobustCommand*\cal{\@fontswitch\relax\mathcal}
+\DeclareRobustCommand*\mit{\@fontswitch\relax\mathnormal}
+
+\newtoggle{es}
+\newcommand{\es}[2]{\iftoggle{es}{#1}{#2}}
+
+\newtoggle{short}
+\newcommand{\short}[2]{\iftoggle{short}{#1}{#2}}
+
+\ifthenelse{\equal{\detokenize{tesis_es}}{\jobname}}{
+  \toggletrue{es}
+  \newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] del \THEYEAR}
+}{
+  \newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] \THEYEAR}
+  \togglefalse{es}
+}
+
+\ifthenelse{\equal{\detokenize{shortCV_en}}{\jobname}}{
+  \toggletrue{short}
+}{
+  \togglefalse{short}
+}
+
+\es{
+  \newcites{Pregrado,Master,Doctorado}{{Memorias de Título},{Tesis de Magíster},{Tesis de Doctorado}}
+}
+{
+  \newcites{Pregrado,Master,Doctorado}{{Undergraduate Final Works},{M.Sc. Thesis},{Ph.D. Thesis}}
+}
+\es{
+%% \section{Publicaciones}
+\firstname{}
+\familyname{Supervisión de tesis$\qquad$}
+}
+{
+\firstname{}
+\familyname{Supervised thesis$\qquad$}
+}
+% ----------------------------------------------------------------------------------
+% content
+% ----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+%% Load supervision file
+\es{
+\section{Resumen}
+\input{supervision.tex}
+}{
+\section{Summary}
+\input{supervision.tex}
+}
+
+\short
+{
+}{
+\nocitePregrado{*}
+\es{\bibliographystylePregrado{spanish}}{\bibliographystylePregrado{english}}
+\bibliographyPregrado{supervisorPregrado}
+
+\nociteMaster{*}
+\es{\bibliographystyleMaster{spanish}}{\bibliographystyleMaster{english}}
+\bibliographyMaster{supervisorMaster}
+
+\nociteDoctorado{*}
+%% \es{\bibliographystyleDoctorado{spanish}}{\bibliographystyleDoctorado{english}}
+%% \bibliographyDoctorado{supervisorDoctorado}
+}
+
+\end{document}

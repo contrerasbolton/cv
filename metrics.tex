@@ -1,0 +1,46 @@
+%% Metrics
+{
+\newread\file
+\openin\file=citations.txt
+\endlinechar-1%<- this removes the space at the end of each read line
+\read\file to\totalGoogle
+\read\file to\fiveYearsGoogle
+\read\file to\citationGoogle
+\read\file to\HindexGoogle
+\read\file to\totalWOS
+\read\file to\fiveYearsWOS
+\read\file to\citationWOS
+\read\file to\HindexWOS
+\read\file to\totalScopus
+\read\file to\fiveYearsScopus
+\read\file to\citationScopus
+\read\file to\HindexScopus
+\read\file to\totalRG
+\read\file to\fiveYearsRG
+\read\file to\citationRG
+\read\file to\HindexRG
+\closein\file
+%% \endgroup
+\es{
+%% \newpage
+  \section{Métricas de publicación}
+     \cvitem{\aiGoogleScholar}{\href{https://scholar.google.es/citations?user=hIl4ixAAAAAJ\&hl}{Google Scholar}
+             ~~~artículos (\totalGoogle{}), citas (\citationGoogle{}), índice h (\HindexGoogle{}), artículos en 5 años (\fiveYearsGoogle{}).}
+     \cvitem{\aiPublons}{\href{https://publons.com/researcher/1711633}{Publons}--\href{https://app.webofknowledge.com/author/\#/record/5462071}{WOS}
+             ~~~artículos (\totalWOS{}), citas (\citationWOS{}), índice h (\HindexWOS{}), artículos en 5 años (\fiveYearsWOS{}).}
+     \cvitem{\aiElsevier}{\href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{Elsevier--Scopus}
+             ~~artículos (\totalScopus{}), citas (\citationScopus{}), índice h (\HindexScopus{}), artículos en 5 años (\fiveYearsScopus{}).}
+     \cvitem{\aiResearchGate}{\href{https://www.researchgate.net/profile/Carlos\_Contreras\_Bolton}{ResearchGate}
+             ~~~~~artículos (\totalRG{}), citas (\citationRG{}), índice h (\HindexRG{}), artículos en 5 años (\fiveYearsRG{}).}
+}{
+  \section{Publication metrics}
+     \cvitem{\aiGoogleScholar}{\href{https://scholar.google.es/citations?user=hIl4ixAAAAAJ\&hl}{Google Scholar}
+             ~~articles (\totalGoogle{}), citations (\citationGoogle{}), h-index (\HindexGoogle{}), articles in 5-years (\fiveYearsGoogle{}).}
+     \cvitem{\aiPublons}{\href{https://publons.com/researcher/1711633}{Publons}--\href{https://app.webofknowledge.com/author/\#/record/5462071}{WOS}
+             ~~articles (\totalWOS{}), citations (\citationWOS{}), h-index (\HindexWOS{}), articles in 5-years (\fiveYearsWOS{}).}
+     \cvitem{\aiElsevier}{\href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{Elsevier--Scopus}
+             ~articles (\totalScopus{}), citations (\citationScopus{}), h-index (\HindexScopus{}), articles in 5-years (\fiveYearsScopus{}).}
+     \cvitem{\aiResearchGate}{\href{https://www.researchgate.net/profile/Carlos\_Contreras\_Bolton}{ResearchGate}
+             ~~~~articles (\totalRG{}), citations (\citationRG{}), h-index (\HindexRG{}), articles in 5-years (\fiveYearsRG{}).}
+}
+}
