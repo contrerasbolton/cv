@@ -290,19 +290,15 @@
     \cventry{2012}{Information Technology}{Industrial Engineering}{Facultad de Ingeniería}{given as Professor in 2012-2}{}
     \cventry{2011}{Operations Research}{Computer Science and Informatics Engineering}{Facultad de Ingeniería}{given as Teaching Assistant in 2011-2 and 2012-1}{}
 }
+
+%% Load supervision file
 \es{
-  \section{Supervisión de estudiantes de pregrado y magíster}
-  \cventry{}{Memorias de título en progreso}{3 estudiantes}{}{}{}
-  \cventry{}{Memorias de título finalizadas}{1 estudiante}{}{}{}
-  \cventry{}{Tesis de magíster en progreso}{2 estudiantes}{}{}{}
-  %% \cventry{}{Tesis de magíster finalizadas}{2 estudiantes}{}{}{}
+\section{Supervisión de estudiantes de pregrado y magíster}
+\input{supervision.tex}
 }{
-  \section{Supervision of M.Sc. and B.Sc. students}
-  \cventry{}{Undergraduate final works in progress}{3 students}{}{}{}
-  \cventry{}{Undergraduate final works finished}{1 student}{}{}{}
-  \cventry{}{M.Sc. thesis in progress}{3 students}{}{}{}
+\section{Supervision of M.Sc. and B.Sc. students}
+\input{supervision.tex}
 }
-\newpage
 } %% end short
 
 \es{
@@ -322,6 +318,11 @@
     excelencia en los estudios y promover que se conviertan en modelos de rol y
     líderes activos en el campo de la ingeniería informática.}
 }{
+\short
+{
+}{
+\newpage
+}
   \section{Honors and awards}
   \cventry{November 2015}{Ph.D. scholarship abroad - Beca Chile 2015}{Comisión
     Nacional de Investigación Científica y Tecnológica
@@ -484,81 +485,14 @@
 }
 }
 
-%% Journals
-\newcommand{\EJOR}{\href{https://www.journals.elsevier.com/european-journal-of-operational-research}{European Journal of Operational Research}}
-\newcommand{\INS}{\href{https://www.journals.elsevier.com/information-sciences}{Information Sciences}}
-\newcommand{\EXSY}{\href{https://onlinelibrary.wiley.com/journal/14680394}{Expert Systems}}
-\newcommand{\IEI}{\href{https://revistas.unal.edu.co/index.php/ingeinv}{Ingeniería e Investigación}}
-\newcommand{\ITOR}{\href{https://onlinelibrary.wiley.com/journal/14753995}{International Transactions in Operational Research}}
-\newcommand{\ORIJ}{\href{https://www.springer.com/journal/12351}{Operational Research}}
-\newcommand{\IJPEDS}{\href{https://www.tandfonline.com/toc/gpaa20/current}{International Journal of Parallel, Emergent and Distributed Systems}}
+%% Load reviews file
+\input{reviews.tex}
 
-%% Conferences
-\newcommand{\ICPR}{International Conference of Production Research -- Americas 2020 (ICPR)}
+%% \closesection{}                   % needed to renewcommands
+%% \renewcommand{\listitemsymbol}{-} % change the symbol for lists
 
-%% format
-\newcommand{\journals}[1]{\EJOR{} (4), \EXSY{} (2), \INS{} (2), \ITOR{} (1), \ORIJ{} (1), \IJPEDS{} (1) {#1} \IEI{} (1).}
-\newcommand{\conferences}{\ICPR{} (1).}
-\es {
-%% \newpage
-   \section{Actividades de revisión}
-   \cvitem{Artículos de revistas}{\journals{y}}
-   \cvitem{Artículos de conferencias}{\conferences{}}
-}{
-   \section{Peer review activities}
-   \cvitem{Journal articles}{\journals{and}}
-   \cvitem{Conference articles}{\conferences{}}
-}
-
-\closesection{}                   % needed to renewcommands
-\renewcommand{\listitemsymbol}{-} % change the symbol for lists
-
-%% \begingroup
-{
-\newread\file
-\openin\file=citations.txt
-\endlinechar-1%<- this removes the space at the end of each read line
-\read\file to\totalGoogle
-\read\file to\fiveYearsGoogle
-\read\file to\citationGoogle
-\read\file to\HindexGoogle
-\read\file to\totalWOS
-\read\file to\fiveYearsWOS
-\read\file to\citationWOS
-\read\file to\HindexWOS
-\read\file to\totalScopus
-\read\file to\fiveYearsScopus
-\read\file to\citationScopus
-\read\file to\HindexScopus
-\read\file to\totalRG
-\read\file to\fiveYearsRG
-\read\file to\citationRG
-\read\file to\HindexRG
-\closein\file
-%% \endgroup
-\es{
-%% \newpage
-  \section{Métricas de publicación}
-     \cvitem{\aiGoogleScholar}{\href{https://scholar.google.es/citations?user=hIl4ixAAAAAJ\&hl}{Google Scholar}
-             ~~~artículos (\totalGoogle{}), citas (\citationGoogle{}), índice h (\HindexGoogle{}), artículos en 5 años (\fiveYearsGoogle{}).}
-     \cvitem{\aiPublons}{\href{https://publons.com/researcher/1711633}{Publons}--\href{https://app.webofknowledge.com/author/\#/record/5462071}{WOS}
-             ~~~artículos (\totalWOS{}), citas (\citationWOS{}), índice h (\HindexWOS{}), artículos en 5 años (\fiveYearsWOS{}).}
-     \cvitem{\aiElsevier}{\href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{Elsevier--Scopus}
-             ~~artículos (\totalScopus{}), citas (\citationScopus{}), índice h (\HindexScopus{}), artículos en 5 años (\fiveYearsScopus{}).}
-     \cvitem{\aiResearchGate}{\href{https://www.researchgate.net/profile/Carlos\_Contreras\_Bolton}{ResearchGate}
-             ~~~~~artículos (\totalRG{}), citas (\citationRG{}), índice h (\HindexRG{}), artículos en 5 años (\fiveYearsRG{}).}
-}{
-  \section{Publication metrics}
-     \cvitem{\aiGoogleScholar}{\href{https://scholar.google.es/citations?user=hIl4ixAAAAAJ\&hl}{Google Scholar}
-             ~~articles (\totalGoogle{}), citations (\citationGoogle{}), h-index (\HindexGoogle{}), articles in 5-years (\fiveYearsGoogle{}).}
-     \cvitem{\aiPublons}{\href{https://publons.com/researcher/1711633}{Publons}--\href{https://app.webofknowledge.com/author/\#/record/5462071}{WOS}
-             ~~articles (\totalWOS{}), citations (\citationWOS{}), h-index (\HindexWOS{}), articles in 5-years (\fiveYearsWOS{}).}
-     \cvitem{\aiElsevier}{\href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{Elsevier--Scopus}
-             ~articles (\totalScopus{}), citations (\citationScopus{}), h-index (\HindexScopus{}), articles in 5-years (\fiveYearsScopus{}).}
-     \cvitem{\aiResearchGate}{\href{https://www.researchgate.net/profile/Carlos\_Contreras\_Bolton}{ResearchGate}
-             ~~~~articles (\totalRG{}), citations (\citationRG{}), h-index (\HindexRG{}), articles in 5-years (\fiveYearsRG{}).}
-}
-}
+%% Load metrics file
+\input{metrics.tex}
 
 \short
 {
@@ -573,7 +507,7 @@
 % nombre del archivo BibTeX
 
 \nociteLibro{*}
-\es{\bibliographystyleLibro{spanish}}{\bibliographystyleLibro{english}}
+\es{\newpage\bibliographystyleLibro{spanish}}{\bibliographystyleLibro{english}}
 \bibliographyLibro{publicacionesLibro}
 
 \nociteProceeding{*}
