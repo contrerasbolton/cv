@@ -24,11 +24,41 @@
 \usepackage[scale=0.8]{geometry}
 \usepackage{gensymb}
 \usepackage{footmisc} % enabling footnotes.
-
 \usepackage{academicons}
-
-\usepackage{etoolbox}
 \usepackage{ifthen}
+
+%%%------------------------------------------------------------------
+%%% Reverse numbering of bibliography
+\usepackage{etaremune}
+\usepackage{etoolbox}
+\makeatletter
+\AtBeginDocument{%%% natbib redefines the environment there
+\renewenvironment{thebibliography}[1]
+ {\bibsection\parindent\z@\bibpreamble\bibfont
+  \settowidth{\dimen0}{#1.}%
+  \setlength{\dimen2}{\dimen0}%
+  \addtolength{\dimen2}{\labelsep}
+  \begin{etaremune}[labelwidth=\dimen0,leftmargin=\dimen2]
+  \ifNAT@openbib
+    \renewcommand\newblock{\par}%
+  \else
+    \renewcommand\newblock{\hskip.11em \@plus .33em \@minus .07em}%
+  \fi
+  \sloppy
+  \clubpenalty4000
+  \widowpenalty4000
+  \sfcode`\.\@m
+  \let\NAT@bibitem@first@sw\@firstoftwo
+  \let\citeN\cite\let\shortcite\cite\let\citeasnoun\cite}
+ {\bibitem@fin\bibpostamble
+  \def\@noitemerr{\PackageWarning{natbib}{Empty `thebibliography' environment}}%
+  \end{etaremune}
+  \bibcleanup}
+}%%% end of \AtBeginDocument
+
+%%% patch \@lbibitem to use only \item (for etaremune)
+\patchcmd{\@lbibitem}{\item[\hfil\NAT@anchor{#2}{\NAT@num}]}{\item}{}{}
+\makeatother
 
 \recomputelengths                             % required when changes are made to page layout lengths
 \AtBeginDocument{
@@ -94,7 +124,7 @@
   \newcites{Pregrado,Master,Doctorado}{{Memorias de Título},{Tesis de Magíster},{Tesis de Doctorado}}
 }
 {
-  \newcites{Pregrado,Master,Doctorado}{{Undergraduate Final Works},{M.Sc. Thesis},{Ph.D. Thesis}}
+  \newcites{Pregrado,Master,Doctorado}{{Undergraduate Final Works},{M.Sc. Theses},{Ph.D. Theses}}
 }
 \es{
 %% \section{Publicaciones}
@@ -103,7 +133,7 @@
 }
 {
 \firstname{}
-\familyname{Supervised thesis$\qquad$}
+\familyname{Supervised theses$\qquad$}
 }
 % ----------------------------------------------------------------------------------
 % content

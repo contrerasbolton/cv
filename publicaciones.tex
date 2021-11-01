@@ -24,11 +24,41 @@
 \usepackage[scale=0.8]{geometry}
 \usepackage{gensymb}
 \usepackage{footmisc} % enabling footnotes.
-
 \usepackage{academicons}
-
-\usepackage{etoolbox}
 \usepackage{ifthen}
+
+%%%------------------------------------------------------------------
+%%% Reverse numbering of bibliography
+\usepackage{etaremune}
+\usepackage{etoolbox}
+\makeatletter
+\AtBeginDocument{%%% natbib redefines the environment there
+\renewenvironment{thebibliography}[1]
+ {\bibsection\parindent\z@\bibpreamble\bibfont
+  \settowidth{\dimen0}{#1.}%
+  \setlength{\dimen2}{\dimen0}%
+  \addtolength{\dimen2}{\labelsep}
+  \begin{etaremune}[labelwidth=\dimen0,leftmargin=\dimen2]
+  \ifNAT@openbib
+    \renewcommand\newblock{\par}%
+  \else
+    \renewcommand\newblock{\hskip.11em \@plus .33em \@minus .07em}%
+  \fi
+  \sloppy
+  \clubpenalty4000
+  \widowpenalty4000
+  \sfcode`\.\@m
+  \let\NAT@bibitem@first@sw\@firstoftwo
+  \let\citeN\cite\let\shortcite\cite\let\citeasnoun\cite}
+ {\bibitem@fin\bibpostamble
+  \def\@noitemerr{\PackageWarning{natbib}{Empty `thebibliography' environment}}%
+  \end{etaremune}
+  \bibcleanup}
+}%%% end of \AtBeginDocument
+
+%%% patch \@lbibitem to use only \item (for etaremune)
+\patchcmd{\@lbibitem}{\item[\hfil\NAT@anchor{#2}{\NAT@num}]}{\item}{}{}
+\makeatother
 
 \recomputelengths                             % required when changes are made to page layout lengths
 \AtBeginDocument{
@@ -129,80 +159,10 @@
 %% Load reviews file
 \input{reviews.tex}
 
-\closesection{}                   % needed to renewcommands
-\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+%% Load metrics file
+\input{metrics.tex}
 
-%% \begingroup
-{
-\newread\file
-\openin\file=citations.txt
-\endlinechar-1%<- this removes the space at the end of each read line
-\read\file to\totalGoogle
-\read\file to\fiveYearsGoogle
-\read\file to\citationGoogle
-\read\file to\HindexGoogle
-\read\file to\totalWOS
-\read\file to\fiveYearsWOS
-\read\file to\citationWOS
-\read\file to\HindexWOS
-\read\file to\totalScopus
-\read\file to\fiveYearsScopus
-\read\file to\citationScopus
-\read\file to\HindexScopus
-\read\file to\totalRG
-\read\file to\fiveYearsRG
-\read\file to\citationRG
-\read\file to\HindexRG
-\closein\file
-%% \endgroup
-\es{
-%% \newpage
-  \section{Métricas de publicación}
-     \cvitem{\aiGoogleScholar}{\href{https://scholar.google.es/citations?user=hIl4ixAAAAAJ\&hl}{Google Scholar}
-             ~~~artículos (\totalGoogle{}), citas (\citationGoogle{}), índice h (\HindexGoogle{}), artículos en 5 años (\fiveYearsGoogle{}).}
-     \cvitem{\aiPublons}{\href{https://publons.com/researcher/1711633}{Publons}--\href{https://app.webofknowledge.com/author/\#/record/5462071}{WOS}
-             ~~~artículos (\totalWOS{}), citas (\citationWOS{}), índice h (\HindexWOS{}), artículos en 5 años (\fiveYearsWOS{}).}
-     \cvitem{\aiElsevier}{\href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{Elsevier--Scopus}
-             ~~artículos (\totalScopus{}), citas (\citationScopus{}), índice h (\HindexScopus{}), artículos en 5 años (\fiveYearsScopus{}).}
-     \cvitem{\aiResearchGate}{\href{https://www.researchgate.net/profile/Carlos\_Contreras\_Bolton}{ResearchGate}
-             ~~~~~artículos (\totalRG{}), citas (\citationRG{}), índice h (\HindexRG{}), artículos en 5 años (\fiveYearsRG{}).}
-}{
-  \section{Publication metrics}
-     \cvitem{\aiGoogleScholar}{\href{https://scholar.google.es/citations?user=hIl4ixAAAAAJ\&hl}{Google Scholar}
-             ~~articles (\totalGoogle{}), citations (\citationGoogle{}), h-index (\HindexGoogle{}), articles in 5-years (\fiveYearsGoogle{}).}
-     \cvitem{\aiPublons}{\href{https://publons.com/researcher/1711633}{Publons}--\href{https://app.webofknowledge.com/author/\#/record/5462071}{WOS}
-             ~~articles (\totalWOS{}), citations (\citationWOS{}), h-index (\HindexWOS{}), articles in 5-years (\fiveYearsWOS{}).}
-     \cvitem{\aiElsevier}{\href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{Elsevier--Scopus}
-             ~articles (\totalScopus{}), citations (\citationScopus{}), h-index (\HindexScopus{}), articles in 5-years (\fiveYearsScopus{}).}
-     \cvitem{\aiResearchGate}{\href{https://www.researchgate.net/profile/Carlos\_Contreras\_Bolton}{ResearchGate}
-             ~~~~articles (\totalRG{}), citations (\citationRG{}), h-index (\HindexRG{}), articles in 5-years (\fiveYearsRG{}).}
-}
-}
-
-\short
-{
-}{
-\nociteSometido{*}
-%%\es{\bibliographystyleSometido{spanish}}{\bibliographystyleSometido{english}}
-%%\bibliographySometido{publicacionesSometido}                   % 'publications' es el
-
-\nociteRevista{*}
-\es{\bibliographystyleRevista{spanish}}{\bibliographystyleRevista{english}}
-\bibliographyRevista{publicacionesRevista}                   % 'publications' es el
-% nombre del archivo BibTeX
-
-\nociteLibro{*}
-\es{\bibliographystyleLibro{spanish}}{\bibliographystyleLibro{english}}
-\bibliographyLibro{publicacionesLibro}
-
-\nociteProceeding{*}
-\es{\bibliographystyleProceeding{spanish}}{\bibliographystyleProceeding{english}}
-\bibliographyProceeding{publicacionesProceeding}
-
-\nociteConferencia{*}
-\es{\bibliographystyleConferencia{spanish}}{\bibliographystyleConferencia{english}}
-\bibliographyConferencia{publicacionesConferencia}      % 'publications'
-%% es el nombre del archivo BibTeX
-}
+%% Load papers file
+\input{papers.tex}
 
 \end{document}

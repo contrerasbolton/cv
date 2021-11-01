@@ -298,6 +298,8 @@ FUNCTION {bbl.mthesis}
 FUNCTION {bbl.phdthesis}
 { "Ph.D. Thesis" }
 
+%% Months
+
 MACRO {jan} {"January"}
 
 MACRO {feb} {"February"}
@@ -322,11 +324,15 @@ MACRO {nov} {"November"}
 
 MACRO {dec} {"December"}
 
+%% Indexing
+
 MACRO {scopus} {"\href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{Indexed in Scopus}"}
 
 MACRO {isi} {"\href{https://publons.com/researcher/1711633/carlos-contreras-bolton/publications/}{Indexed in WoS}"}
 
 MACRO {scielo} {"\href{https://search.scielo.org/?q=contreras-bolton&where=ORG}{Indexed in SciELO}"}
+
+%% Places
 
 MACRO {roma} {"Rome, Italy"}
 
@@ -366,54 +372,41 @@ MACRO {seoul} {"Seoul, Korea"}
 
 MACRO {marrakech} {"Marrakech, Morocco"}
 
-MACRO {submitted} {"{\bf under revision}"}
+%% Status
+
+MACRO {submitted} {"Under revision"}
 
 MACRO {appear} {"to appear"}
 
 MACRO {press} {"in press"}
 
- % End module: spanish.mbs
-%% Copyright 1994-2007 Patrick W Daly
-MACRO {acmcs} {"ACM Computing Surveys"}
+%% Supervision
 
-MACRO {acta} {"Acta Informatica"}
+MACRO {ICI-UDEC} {"Industrial Engineering, Universidad de Concepción"}
 
-MACRO {cacm} {"Communications of the ACM"}
+MACRO {MII-UDEC} {"M.Sc. in Industrial Engineering, Universidad de Concepción"}
 
-MACRO {ibmjrd} {"IBM Journal of Research and Development"}
+MACRO {LCC}{"B.Sc. in Computer Science, Universidad de Santiago de Chile"}
 
-MACRO {ibmsj} {"IBM Systems Journal"}
+%% B.Sc.
 
-MACRO {ieeese} {"IEEE Transactions on Software Engineering"}
+MACRO {BSC1}{"A metaheuristic for solving the Google machine reassignment problem"}
 
-MACRO {ieeetc} {"IEEE Transactions on Computers"}
+MACRO {BSC2}{"A lagrangian matheuristic for the multidimensional knapsack problem"}
 
-MACRO {ieeetcad}
- {"IEEE Transactions on Computer-Aided Design of Integrated Circuits"}
+MACRO {BSC3}{"A metaheuristic for the last‐mile delivery problem during major infectious disease outbreak"}
 
-MACRO {ipl} {"Information Processing Letters"}
+%% M.Sc.
 
-MACRO {jacm} {"Journal of the ACM"}
+MACRO {MSC1}{"A metaheuristic for the double traveling salesman problem with partial last-in-first-out loading constraints"}
 
-MACRO {jcss} {"Journal of Computer and System Sciences"}
+MACRO {MSC2}{"Elective surgery programming at a public hospital in Chile considering the affinity of surgical team and limited ICU capacity"}
 
-MACRO {scp} {"Science of Computer Programming"}
 
-MACRO {sicomp} {"SIAM Journal on Computing"}
+%% Journals
 
-MACRO {tocs} {"ACM Transactions on Computer Systems"}
+MACRO {itor} {"\href{https://onlinelibrary.wiley.com/journal/14753995}{International Transactions in Operational Research}"}
 
-MACRO {tods} {"ACM Transactions on Database Systems"}
-
-MACRO {tog} {"ACM Transactions on Graphics"}
-
-MACRO {toms} {"ACM Transactions on Mathematical Software"}
-
-MACRO {toois} {"ACM Transactions on Office Information Systems"}
-
-MACRO {toplas} {"ACM Transactions on Programming Languages and Systems"}
-
-MACRO {tcs} {"Theoretical Computer Science"}
 FUNCTION {bibinfo.check}
 { swap$
   duplicate$ missing$

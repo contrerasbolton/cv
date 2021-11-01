@@ -296,6 +296,8 @@ FUNCTION {bbl.mthesis}
 FUNCTION {bbl.phdthesis}
 { "Tesis de Ph.D." }
 
+%% Months
+
 MACRO {jan} {"Enero"}
 
 MACRO {feb} {"Febrero"}
@@ -320,11 +322,15 @@ MACRO {nov} {"Noviembre"}
 
 MACRO {dec} {"Diciembre"}
 
+%% Indexing
+
 MACRO {scopus} {"\href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{{Indexada en Scopus}}"}
 
 MACRO {isi} {"\href{https://publons.com/researcher/1711633/carlos-contreras-bolton/publications/}{Indexada en WoS}"}
 
 MACRO {scielo} {"\href{https://search.scielo.org/?q=contreras-bolton&where=ORG}{Indexada en SciELO}"}
+
+%% Places
 
 MACRO {roma} {"Roma, Italia"}
 
@@ -364,54 +370,40 @@ MACRO {marrakech} {"Marrakech, Marruecos"}
 
 MACRO {seoul} {"Seúl, Corea"}
 
+%% Status
+
 MACRO {submitted} {"bajo revisión"}
 
 MACRO {appear} {"por aparecer"}
 
 MACRO {press} {"en prensa"}
 
- % End module: spanish.mbs
-%% Copyright 1994-2007 Patrick W Daly
-MACRO {acmcs} {"ACM Computing Surveys"}
+%% Supervision
 
-MACRO {acta} {"Acta Informatica"}
+MACRO {ICI-UDEC} {"Ingeniería Civil Industrial, Universidad de Concepción"}
 
-MACRO {cacm} {"Communications of the ACM"}
+MACRO {MII-UDEC} {"Magíster en Ingeniería Industrial, Universidad de Concepción"}
 
-MACRO {ibmjrd} {"IBM Journal of Research and Development"}
+MACRO {LCC}{"Licenciatura en Ciencia de la Computación, Universidad de Santiago de Chile"}
 
-MACRO {ibmsj} {"IBM Systems Journal"}
+%% B.Sc.
 
-MACRO {ieeese} {"IEEE Transactions on Software Engineering"}
+MACRO {BSC1}{"Una metaheurística para resolver el problema de reasignación de máquinas de Google"}
 
-MACRO {ieeetc} {"IEEE Transactions on Computers"}
+MACRO {BSC2}{"Una metaheurı́stica lagrangiana para el problema de la mochila multidimensional"}
 
-MACRO {ieeetcad}
- {"IEEE Transactions on Computer-Aided Design of Integrated Circuits"}
+MACRO {BSC3}{"Una metaheurística para el problema de entrega en la última milla durante el brote de enfermedades infecciosas"}
 
-MACRO {ipl} {"Information Processing Letters"}
+%% M.Sc.
 
-MACRO {jacm} {"Journal of the ACM"}
+MACRO {MSC1}{"Una metaheurística para el problema del vendedor viajero doble con restricciones de cargas parciales, el último en entrar es el primero en salir"}
 
-MACRO {jcss} {"Journal of Computer and System Sciences"}
+MACRO {MSC2}{"Programando cirugı́as electivas para un hospital público de Chile con afinidad en equipos quirúrgicos y capacidad de unidades UCI"}
 
-MACRO {scp} {"Science of Computer Programming"}
+%% Journals
 
-MACRO {sicomp} {"SIAM Journal on Computing"}
+MACRO {itor} {"\href{https://onlinelibrary.wiley.com/journal/14753995}{International Transactions in Operational Research}"}
 
-MACRO {tocs} {"ACM Transactions on Computer Systems"}
-
-MACRO {tods} {"ACM Transactions on Database Systems"}
-
-MACRO {tog} {"ACM Transactions on Graphics"}
-
-MACRO {toms} {"ACM Transactions on Mathematical Software"}
-
-MACRO {toois} {"ACM Transactions on Office Information Systems"}
-
-MACRO {toplas} {"ACM Transactions on Programming Languages and Systems"}
-
-MACRO {tcs} {"Theoretical Computer Science"}
 FUNCTION {bibinfo.check}
 { swap$
   duplicate$ missing$
