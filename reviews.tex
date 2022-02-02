@@ -13,22 +13,36 @@
 \newcommand{\CIN}{\href{https://www.hindawi.com/journals/cin/}{Computational Intelligence and Neuroscience}}
 \newcommand{\SC}{\href{https://journals.sagepub.com/home/sci}{Science Progress}}
 
+\newcommand{\ejor}{5}
+\newcommand{\ins}{3}
+\newcommand{\exsy}{3}
+\newcommand{\iei}{1}
+\newcommand{\itor}{1}
+\newcommand{\orij}{1}
+\newcommand{\ijpeds}{1}
+\newcommand{\flex}{3}
+\newcommand{\ejie}{1}
+\newcommand{\cin}{1}
+\newcommand{\scj}{1}
 
-
+%% Sum of reviews
+\newcommand{\Suma}{\the\numexpr \ejor + \ins + \exsy + \iei + \itor + \orij + \ijpeds + \flex + \ejie + \cin + \scj \relax}
+	
 %% Conferences
 \newcommand{\ICPR}{\href{https://doi.org/10.1007/978-3-030-76307-7}{International Conference of Production Research -- Americas 2020 (ICPR)}}
 
 %% format
-\newcommand{\journals}[1]{\EJOR{} (5), \EXSY{} (3), \INS{} (3), \FLEX{} (2), \ITOR{} (1), \ORIJ{} (1), \IJPEDS{} (1), \IEI{} (1), \EJIE{} (1), \CIN (1) {#1} \SC{} (1).}
+\newcommand{\journals}[1]{\EJOR{} (\ejor), \FLEX{} (\flex), \EXSY{} (\exsy), \INS{} (\ins), \ITOR{} (\itor), \ORIJ{} (\orij), \IJPEDS{} (\ejie), \IEI{} (\iei), \EJIE{} (\ejie), \CIN{} (\cin) {#1} \SC{} (\scj).}
 \newcommand{\conferences}{\ICPR{} (1).}
 
 \es {
+
 %% \newpage
    \section{Actividades de revisión}
-   \cvitem{Artículos de revistas\\20 revisados}{\journals{y}}
+   \cvitem{Artículos de revistas\\\Suma ~revisados}{\journals{y}}
    \cvitem{Artículos de conferencias}{\conferences{}}
 }{
    \section{Peer review activities}
-   \cvitem{Journal articles\\20 reviews}{\journals{and}}
+   \cvitem{Journal articles\\\Suma ~reviews}{\journals{and}}
    \cvitem{Conference articles}{\conferences{}}
 }

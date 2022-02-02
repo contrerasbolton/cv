@@ -1,20 +1,18 @@
 {
   \newcommand{\PTp}{3} %% Memorias de título en progreso
   \newcommand{\PTf}{3} %% Memorias de título finalizadas
-  \newcommand{\MTp}{2} %% Tesis de magíster en progreso
+  \newcommand{\MTp}{1} %% Tesis de magíster en progreso
   \newcommand{\MTf}{2} %% Tesis de magíster finalizadas
 
-  \es{
-    %% \section{Resumen}
-    \cventry{}{Memorias de título en progreso}{\PTp{} estudiantes}{}{}{}
-    \cventry{}{Memorias de título finalizadas}{\PTf{} estudiantes}{}{}{}
-    \cventry{}{Tesis de magíster en progreso}{\MTp{} estudiantes}{}{}{}
-    \cventry{}{Tesis de magíster finalizadas}{\MTf{} estudiantes}{}{}{}
+\newcommand{\printStudents}[2]{\ifthenelse{\equal{#1}{1}}{#1 #2 student}{#1 #2 students}}
+\newcommand{\printEstudiantes}[2]{\ifthenelse{\equal{#1}{1}}{#1 estudiante de #2}{#1 estudiantes de #2}}
+
+%\printEstudiantes{\PTp}
+\es{
+    \cvitem{En progreso}{\printEstudiantes{\PTp{}}{pregrado} y \printEstudiantes{\MTp}{magíster}.}
+    \cvitem{Finalizadas}{\printEstudiantes{\PTf{}}{pregrado} y \printEstudiantes{\MTf}{magíster}.}
   }{
-    %% \section{Summary}
-    \cventry{}{Undergraduate final works in progress}{\PTp{} students}{}{}{}
-    \cventry{}{Undergraduate final works finished}{\PTf{} students}{}{}{}
-    \cventry{}{M.Sc. theses in progress}{\MTp{} students}{}{}{}
-    \cventry{}{M.Sc. theses finished}{\MTf{} students}{}{}{}
+    \cvitem{In progress}{\printStudents{\PTp{}}{undergraduate} and \printStudents{\MTp}{M.Sc.}.}
+    \cvitem{Finished}{\printStudents{\PTf{}}{undergraduate} and \printStudents{\MTf}{M.Sc.}.}
   }
 } %% no quitar, las referencias se comienzan a juntar palabras
