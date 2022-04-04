@@ -394,6 +394,12 @@ MACRO {BSC2}{"Una metaheurı́stica lagrangiana para el problema de la mochila m
 
 MACRO {BSC3}{"Una metaheurística para el problema de entrega en la última milla durante el brote de enfermedades infecciosas"}
 
+MACRO {BSC4}{"Una matheurística para la resolución del Set Union Knapsack Problem"}
+
+MACRO {BSC5}{"Una metaheurística para el problema de planificación de ruta más corta multipunto"}
+
+MACRO {BSC6}{"Una metaheurística para el problema de conjunto dominante con capacidad mínima"}
+
 %% M.Sc.
 
 MACRO {MSC1}{"Una metaheurística para el problema del vendedor viajero doble con restricciones de cargas parciales, el último en entrar es el primero en salir"}

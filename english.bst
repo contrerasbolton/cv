@@ -396,6 +396,12 @@ MACRO {BSC2}{"A lagrangian matheuristic for the multidimensional knapsack proble
 
 MACRO {BSC3}{"A metaheuristic for the last‐mile delivery problem during major infectious disease outbreak"}
 
+MACRO {BSC4}{"A matheuristic for solving the Set Union Knapsack Problem"}
+
+MACRO {BSC5}{"A metaheuristic for the multi-point shortest path planning"}
+
+MACRO {BSC6}{"A metaheuristic for the minimum capacitated dominating set problem"}
+
 %% M.Sc.
 
 MACRO {MSC1}{"A metaheuristic for the double traveling salesman problem with partial last-in-first-out loading constraints"}
