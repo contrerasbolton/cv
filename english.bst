@@ -326,11 +326,11 @@ MACRO {dec} {"December"}
 
 %% Indexing
 
-MACRO {scopus} {"\href{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{Indexed in Scopus}"}
+MACRO {scopus} {"\myurls{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{Indexed in Scopus}"}
 
-MACRO {isi} {"\href{https://publons.com/researcher/1711633/carlos-contreras-bolton/publications/}{Indexed in WoS}"}
+MACRO {isi} {"\myurls{https://publons.com/researcher/1711633/carlos-contreras-bolton/publications/}{Indexed in WoS}"}
 
-MACRO {scielo} {"\href{https://search.scielo.org/?q=contreras-bolton&where=ORG}{Indexed in SciELO}"}
+MACRO {scielo} {"\myurls{https://search.scielo.org/?q=contreras-bolton&where=ORG}{Indexed in SciELO}"}
 
 %% Places
 
@@ -411,7 +411,7 @@ MACRO {MSC2}{"Elective surgery programming at a public hospital in Chile conside
 
 %% Journals
 
-MACRO {itor} {"\href{https://onlinelibrary.wiley.com/journal/14753995}{International Transactions in Operational Research}"}
+MACRO {itor} {"\myurls{https://onlinelibrary.wiley.com/journal/14753995}{International Transactions in Operational Research}"}
 
 FUNCTION {bibinfo.check}
 { swap$
@@ -545,7 +545,7 @@ FUNCTION {format.doi}
 {
   doi empty$
     { "" }
-    { "DOI: \href{http://dx.doi.org/" doi * "}{\ttfamily " * doi escape.url.characters * "}" * }
+    { "doi: \myurls{http://dx.doi.org/" doi * "}{\ttfamily " * doi escape.url.characters * "}" * }
   if$
 }
 FUNCTION {format.note}
