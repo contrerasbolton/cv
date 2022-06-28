@@ -1,8 +1,9 @@
 {
-  \newcommand{\PTp}{3} %% Memorias de título en progreso
-  \newcommand{\PTf}{6} %% Memorias de título finalizadas
-  \newcommand{\MTp}{0} %% Tesis de magíster en progreso
-  \newcommand{\MTf}{2} %% Tesis de magíster finalizadas
+  \newcommand{\PTp}{3}  %% Memorias de título en progreso
+  \newcommand{\PTf}{6}  %% Memorias de título finalizadas
+  \newcommand{\MTp}{0}  %% Tesis de magíster en progreso
+  \newcommand{\MTf}{2}  %% Tesis de magíster finalizadas
+  \newcommand{\cMTf}{1} %% Tesis de co-guía magíster finalizadas
 
 \newcommand{\printStudents}[2]{\ifthenelse{\equal{#1}{1}}{#1 #2 student}{#1 #2 students}}
 \newcommand{\printEstudiantes}[2]{\ifthenelse{\equal{#1}{1}}{#1 estudiante de #2}{#1 estudiantes de #2}}
@@ -10,9 +11,9 @@
 %\printEstudiantes{\PTp}
 \es{
     \cvitem{En progreso}{\printEstudiantes{\PTp{}}{pregrado} y \printEstudiantes{\MTp}{magíster}.}
-    \cvitem{Finalizadas}{\printEstudiantes{\PTf{}}{pregrado} y \printEstudiantes{\MTf}{magíster}.}
+    \cvitem{Finalizadas}{\printEstudiantes{\PTf{}}{pregrado}, \printEstudiantes{\MTf}{magíster} y \printEstudiantes{\cMTf}{magíster co-guíado}.}
   }{
     \cvitem{In progress}{\printStudents{\PTp{}}{undergraduate} and \printStudents{\MTp}{M.Sc.}.}
-    \cvitem{Finished}{\printStudents{\PTf{}}{undergraduate} and \printStudents{\MTf}{M.Sc.}.}
+    \cvitem{Finished}{\printStudents{\PTf{}}{undergraduate}, \printStudents{\MTf}{M.Sc.} and \printStudents{\cMTf}{co-supervisor M.Sc.}.}
   }
 } %% no quitar, las referencias se comienzan a juntar palabras

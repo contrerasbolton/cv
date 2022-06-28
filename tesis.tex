@@ -61,13 +61,10 @@
 \makeatother
 
 \recomputelengths                             % required when changes are made to page layout lengths
-\AtBeginDocument{
-  %% \hypersetup{pdfborder = 0 0 1,linkcolor=blue}
-  %% \definecolor{links}{HTML}{2A1B81}
-  \definecolor{links}{rgb}{0.22,0.45,0.70}% light blue
-  \hypersetup{colorlinks,linkcolor=,urlcolor=links}
-}
+\newcommand{\myurl}[1]{\href{#1}{\color{color1} #1}}
+\newcommand{\myurls}[2]{\href{#1}{\color{color1} #2}}
 
+\renewcommand*{\emailsymbol}         {{\small\faEnvelope}~}
 \newcommand{\AddressOfficial}{Edmundo Larenas 219, Concepción 4070409, Chile}
 \newcommand{\correo}{carlos.contreras.b@udec.cl}
 % personal data
@@ -121,10 +118,10 @@
 }
 
 \es{
-  \newcites{Pregrado,Master,Doctorado}{{Memorias de Título},{Tesis de Magíster},{Tesis de Doctorado}}
+  \newcites{Pregrado,Master,Doctorado}{{Memorias de título},{Tesis de magíster},{Tesis de doctorado}}
 }
 {
-  \newcites{Pregrado,Master,Doctorado}{{Undergraduate Final Works},{M.Sc. Theses},{Ph.D. Theses}}
+  \newcites{Pregrado,Master,Doctorado}{{Undergraduate final works},{M.Sc. theses},{Ph.D. theses}}
 }
 \es{
 %% \section{Publicaciones}

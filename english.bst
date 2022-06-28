@@ -293,7 +293,7 @@ FUNCTION {bbl.techrep}
 { "Informe T\'ecnico" }
 
 FUNCTION {bbl.mthesis}
-{ "Master Thesis" }
+{ "M.Sc." }
 
 FUNCTION {bbl.phdthesis}
 { "Ph.D. Thesis" }
@@ -384,19 +384,25 @@ MACRO {press} {"in press"}
 
 MACRO {ICI-UDEC} {"Industrial Engineering, Universidad de Concepción"}
 
-MACRO {MII-UDEC} {"M.Sc. in Industrial Engineering, Universidad de Concepción"}
+MACRO {MII-UDEC} {"in Industrial Engineering, Universidad de Concepción"}
+
+MACRO {MIINF-USACH} {"in Computer Science Engineering, Universidad de Santiago de Chile"} 
 
 MACRO {LCC}{"B.Sc. in Computer Science, Universidad de Santiago de Chile"}
 
+%% Co-supervision
+
+MACRO {coAdvisorVP}{"in co-supervision with Víctor Parada"}
+
 %% B.Sc.
 
-MACRO {BSC1}{"A metaheuristic for solving the Google machine reassignment problem"}
+MACRO {BSC1}{"A metaheuristic for solving the {G}oogle machine reassignment problem"}
 
 MACRO {BSC2}{"A lagrangian matheuristic for the multidimensional knapsack problem"}
 
 MACRO {BSC3}{"A metaheuristic for the last‐mile delivery problem during major infectious disease outbreak"}
 
-MACRO {BSC4}{"A matheuristic for solving the Set Union Knapsack Problem"}
+MACRO {BSC4}{"A matheuristic for solving the set union knapsack problem"}
 
 MACRO {BSC5}{"A metaheuristic for the multi-point shortest path planning"}
 
@@ -406,12 +412,14 @@ MACRO {BSC6}{"A metaheuristic for the minimum capacitated dominating set problem
 
 MACRO {MSC1}{"A metaheuristic for the double traveling salesman problem with partial last-in-first-out loading constraints"}
 
-MACRO {MSC2}{"Elective surgery programming at a public hospital in Chile considering the affinity of surgical team and limited ICU capacity"}
+MACRO {MSC2}{"Elective surgery programming at a public hospital in {C}hile considering the affinity of surgical team and limited {ICU} capacity"}
 
+MACRO {MSC3}{"Automatic generation of algorithms for the traveling salesman problem with time-dependent service times"}
 
 %% Journals
 
 MACRO {itor} {"\myurls{https://onlinelibrary.wiley.com/journal/14753995}{International Transactions in Operational Research}"}
+MACRO {ejor} {"\myurls{https://www.journals.elsevier.com/european-journal-of-operational-research}{European Journal of Operational Research}"}
 
 FUNCTION {bibinfo.check}
 { swap$
@@ -1191,6 +1199,7 @@ FUNCTION {mastersthesis}
   "title" output.check
   new.block
   bbl.mthesis format.thesis.type output.nonnull
+  new.block
   school "school" bibinfo.warn output
   address "address" bibinfo.check output
   format.date "year" output.check
@@ -1203,8 +1212,9 @@ FUNCTION {mastersthesis}
 FUNCTION {misc}
 { output.bibitem
   format.authors output
-  title howpublished new.block.checkb
-  format.title output
+  format.btitle
+  "title" output.check
+  new.block
   howpublished new.block.checka
   howpublished "howpublished" bibinfo.check output
   format.date output
@@ -1214,6 +1224,7 @@ FUNCTION {misc}
   fin.entry
   empty.misc.check
 }
+
 FUNCTION {phdthesis}
 { output.bibitem
   format.authors "author" output.check

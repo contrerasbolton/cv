@@ -291,7 +291,7 @@ FUNCTION {bbl.techrep}
 { "Informe T\'ecnico" }
 
 FUNCTION {bbl.mthesis}
-{ "Tesis de Mag\'ister" }
+{ "Mag\'ister" }
 
 FUNCTION {bbl.phdthesis}
 { "Tesis de Ph.D." }
@@ -384,17 +384,23 @@ MACRO {ICI-UDEC} {"Ingeniería Civil Industrial, Universidad de Concepción"}
 
 MACRO {MII-UDEC} {"Magíster en Ingeniería Industrial, Universidad de Concepción"}
 
+MACRO {MIINF-USACH} {"Magíster en Ingeniería Informática, Universidad de Santiago de Chile"} 
+
 MACRO {LCC}{"Licenciatura en Ciencia de la Computación, Universidad de Santiago de Chile"}
+
+%% Co-supervision
+
+MACRO {coAdvisorVP}{"co-guíada con Víctor Parada"}
 
 %% B.Sc.
 
-MACRO {BSC1}{"Una metaheurística para resolver el problema de reasignación de máquinas de Google"}
+MACRO {BSC1}{"Una metaheurística para resolver el problema de reasignación de máquinas de {G}oogle"}
 
 MACRO {BSC2}{"Una metaheurı́stica lagrangiana para el problema de la mochila multidimensional"}
 
 MACRO {BSC3}{"Una metaheurística para el problema de entrega en la última milla durante el brote de enfermedades infecciosas"}
 
-MACRO {BSC4}{"Una matheurística para la resolución del Set Union Knapsack Problem"}
+MACRO {BSC4}{"Una matheurística para la resolución del set union knapsack problem"}
 
 MACRO {BSC5}{"Una metaheurística para el problema de planificación de ruta más corta multipunto"}
 
@@ -404,11 +410,14 @@ MACRO {BSC6}{"Una metaheurística para el problema de conjunto dominante con cap
 
 MACRO {MSC1}{"Una metaheurística para el problema del vendedor viajero doble con restricciones de cargas parciales, el último en entrar es el primero en salir"}
 
-MACRO {MSC2}{"Programando cirugı́as electivas para un hospital público de Chile con afinidad en equipos quirúrgicos y capacidad de unidades UCI"}
+MACRO {MSC2}{"Programando cirugı́as electivas para un hospital público de {C}hile con afinidad en equipos quirúrgicos y capacidad de unidades {UCI}"}
+
+MACRO {MSC3}{"Generación automática de algoritmos para el problema del vendedor viajero con tiempo de servicio en los nodos"}
 
 %% Journals
 
 MACRO {itor} {"\myurls{https://onlinelibrary.wiley.com/journal/14753995}{International Transactions in Operational Research}"}
+MACRO {ejor} {"\myurls{https://www.journals.elsevier.com/european-journal-of-operational-research}{European Journal of Operational Research}"}
 
 FUNCTION {bibinfo.check}
 { swap$
@@ -1188,6 +1197,7 @@ FUNCTION {mastersthesis}
   "title" output.check
   new.block
   bbl.mthesis format.thesis.type output.nonnull
+  new.block
   school "school" bibinfo.warn output
   address "address" bibinfo.check output
   format.date "year" output.check
@@ -1200,8 +1210,9 @@ FUNCTION {mastersthesis}
 FUNCTION {misc}
 { output.bibitem
   format.authors output
-  title howpublished new.block.checkb
-  format.title output
+  format.btitle
+  "title" output.check
+  new.block
   howpublished new.block.checka
   howpublished "howpublished" bibinfo.check output
   format.date output
@@ -1211,6 +1222,7 @@ FUNCTION {misc}
   fin.entry
   empty.misc.check
 }
+
 FUNCTION {phdthesis}
 { output.bibitem
   format.authors "author" output.check
