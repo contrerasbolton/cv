@@ -328,6 +328,8 @@ MACRO {scopus} {"\myurls{https://www.scopus.com/authid/detail.uri?authorId=55097
 
 MACRO {isi} {"\myurls{https://publons.com/researcher/1711633/carlos-contreras-bolton/publications/}{Indexada en WoS}"}
 
+MACRO {esci} {"\myurls{https://publons.com/researcher/1711633/carlos-contreras-bolton/publications/}{Indexada en WoS-ESCI}"}
+
 MACRO {scielo} {"\myurls{https://search.scielo.org/?q=contreras-bolton&where=ORG}{Indexada en SciELO}"}
 
 %% Places
@@ -418,6 +420,7 @@ MACRO {MSC3}{"Generación automática de algoritmos para el problema del vendedo
 
 MACRO {itor} {"\myurls{https://onlinelibrary.wiley.com/journal/14753995}{International Transactions in Operational Research}"}
 MACRO {ejor} {"\myurls{https://www.journals.elsevier.com/european-journal-of-operational-research}{European Journal of Operational Research}"}
+MACRO {asc} {"\myurls{https://www.journals.elsevier.com/applied-soft-computing/}{Applied Soft Computing}"}
 
 FUNCTION {bibinfo.check}
 { swap$
@@ -538,11 +541,12 @@ FUNCTION {format.isbn}
 }
 
 FUNCTION {format.issn}
-{ issn "issn" bibinfo.check
-  duplicate$ empty$ 'skip$
+{ %issn bibinfo.check
+  issn empty$
+  { "" }
     {
-      new.block
-      "ISSN " swap$ *
+      %%new.block
+      ". \myurls{https://publons.com/researcher/1711633/carlos-contreras-bolton/publications/}{" * " Indexada en WoS, " * issn escape.url.characters  * "}" *
     }
   if$
 }
@@ -997,12 +1001,13 @@ FUNCTION {article}
       format.pages output
     }
   if$
-  format.issn output
   format.doi output
   new.block
   format.note output
+  format.issn output
   fin.entry
 }
+
 FUNCTION {book}
 { output.bibitem
   author empty$
@@ -1140,7 +1145,7 @@ FUNCTION {inproceedings}
       if$
       format.date "year" output.check
       format.isbn output
-      format.issn output
+      %format.issn output
     }
     { format.incoll.inproc.crossref output.nonnull
       format.pages output
@@ -1273,7 +1278,7 @@ FUNCTION {proceedings}
   if$
       format.date "year" output.check
   format.isbn output
-  format.issn output
+  %format.issn output
   format.doi output
   new.block
   format.note output
