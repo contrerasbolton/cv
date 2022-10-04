@@ -410,6 +410,12 @@ MACRO {BSC5}{"A metaheuristic for the multi-point shortest path planning"}
 
 MACRO {BSC6}{"A metaheuristic for the minimum capacitated dominating set problem"}
 
+MACRO {BSC7}{"Evaluation of achievements and impacts of implementing the Salesforce CRM (Customer Relationship Management) platform in CMPC Pulp S.A."}
+
+MACRO {BSC8}{"An algorithm to solve the traveling salesman problem with time windows in postal services"}
+
+MACRO {BSC9}{"Machine learning model to evaluate the performance of football playersl"}
+
 %% M.Sc.
 
 MACRO {MSC1}{"A metaheuristic for the double traveling salesman problem with partial last-in-first-out loading constraints"}
@@ -1217,7 +1223,8 @@ FUNCTION {mastersthesis}
 
 FUNCTION {misc}
 { output.bibitem
-  format.authors output
+  format.authors "author" output.check
+  new.block
   format.btitle
   "title" output.check
   new.block

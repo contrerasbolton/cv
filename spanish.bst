@@ -408,6 +408,12 @@ MACRO {BSC5}{"Una metaheurística para el problema de planificación de ruta má
 
 MACRO {BSC6}{"Una metaheurística para el problema de conjunto dominante con capacidad mínima"}
 
+MACRO {BSC7}{"Evaluación de logros e impactos de la implementación de plataforma CRM (Customer Relationship Management) de Salesforce en CMPC Pulp S.A"}
+
+MACRO {BSC8}{"Un algoritmo para resolver el problema del vendedor viajero con ventanas de tiempo para servicios postales"}
+
+MACRO {BSC9}{"Modelo de machine learning para evaluación del rendimiento de jugadores de fútbol"}
+
 %% M.Sc.
 
 MACRO {MSC1}{"Una metaheurística para el problema del vendedor viajero doble con restricciones de cargas parciales, el último en entrar es el primero en salir"}
@@ -1214,7 +1220,8 @@ FUNCTION {mastersthesis}
 
 FUNCTION {misc}
 { output.bibitem
-  format.authors output
+  format.authors "author" output.check
+  new.block
   format.btitle
   "title" output.check
   new.block
