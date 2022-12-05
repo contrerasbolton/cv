@@ -326,11 +326,11 @@ MACRO {dec} {"Diciembre"}
 
 MACRO {scopus} {"\myurls{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{{Indexada en Scopus}}"}
 
-MACRO {isi} {"\myurls{https://publons.com/researcher/1711633/carlos-contreras-bolton/publications/}{Indexada en WoS}"}
+MACRO {isi} {"\myurls{https://www.webofscience.com/wos/author/record/706245}{Indexada en WoS}"}
 
-MACRO {esci} {"\myurls{https://publons.com/researcher/1711633/carlos-contreras-bolton/publications/}{Indexada en WoS-ESCI}"}
+MACRO {esci} {"\myurls{https://www.webofscience.com/wos/author/record/706245}{Indexada en WoS-ESCI}"}
 
-MACRO {scielo} {"\myurls{https://search.scielo.org/?q=contreras-bolton&where=ORG}{Indexada en SciELO}"}
+MACRO {scielo} {"\myurls{https://search.scielo.org/?q=\%28au\%3A\%28\%22contreras-bolton\%22\%29\%29&lang=e}{Indexada en SciELO}"}
 
 %% Places
 
@@ -552,7 +552,7 @@ FUNCTION {format.issn}
   { "" }
     {
       %%new.block
-      ". \myurls{https://publons.com/researcher/1711633/carlos-contreras-bolton/publications/}{" * " Indexada en WoS, " * issn escape.url.characters  * "}" *
+      ". \myurls{https://www.webofscience.com/wos/author/record/706245/}{" * " Indexada en WoS, " * issn escape.url.characters  * "}" *
     }
   if$
 }
