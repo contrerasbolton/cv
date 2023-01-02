@@ -414,7 +414,7 @@ MACRO {BSC7}{"Evaluation of achievements and impacts of implementing the Salesfo
 
 MACRO {BSC8}{"An algorithm to solve the traveling salesman problem with time windows in postal services"}
 
-MACRO {BSC9}{"Machine learning model to evaluate the performance of football playersl"}
+MACRO {BSC9}{"Machine learning model to evaluate the performance of football players"}
 
 %% M.Sc.
 
