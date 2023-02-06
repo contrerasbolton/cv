@@ -394,7 +394,7 @@ MACRO {LCC}{"B.Sc. in Computer Science, Universidad de Santiago de Chile"}
 
 %% Co-supervision
 
-MACRO {coAdvisorVP}{"in co-supervision with Víctor Parada"}
+MACRO {coAdvisorVP}{"co-supervised with Víctor Parada"}
 
 %% B.Sc.
 
