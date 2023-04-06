@@ -416,6 +416,8 @@ MACRO {BSC8}{"An algorithm to solve the traveling salesman problem with time win
 
 MACRO {BSC9}{"Machine learning model to evaluate the performance of football players"}
 
+MACRO {BSC10}{"Daily scheduling for the assignment of loads of work in wood plants at CMPC Maderas SpA"}
+
 %% M.Sc.
 
 MACRO {MSC1}{"A metaheuristic for the double traveling salesman problem with partial last-in-first-out loading constraints"}
@@ -428,8 +430,8 @@ MACRO {MSC3}{"Automatic generation of algorithms for the traveling salesman prob
 
 MACRO {itor} {"\myurls{https://onlinelibrary.wiley.com/journal/14753995}{International Transactions in Operational Research}"}
 MACRO {ejor} {"\myurls{https://www.journals.elsevier.com/european-journal-of-operational-research}{European Journal of Operational Research}"}
-MACRO {asc} {"\myurls{https://www.journals.elsevier.com/applied-soft-computing/}{Applied Soft Computing}"}
-
+MACRO {asc} {"\myurls{https://www.journals.elsevier.com/applied-soft-computing}{Applied Soft Computing}"}
+MACRO {cor} {"\myurls{https://www.sciencedirect.com/journal/computers-and-operations-research}{Computers \& Operations Research}"}
 
 FUNCTION {bibinfo.check}
 { swap$

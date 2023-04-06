@@ -414,6 +414,8 @@ MACRO {BSC8}{"Un algoritmo para resolver el problema del vendedor viajero con ve
 
 MACRO {BSC9}{"Modelo de machine learning para evaluación del rendimiento de jugadores de fútbol"}
 
+MACRO {BSC10}{"Planificación diaria para la asignación de cargas de trabajo en plantas de madera en CMPC Maderas SpA"}
+
 %% M.Sc.
 
 MACRO {MSC1}{"Una metaheurística para el problema del vendedor viajero doble con restricciones de cargas parciales, el último en entrar es el primero en salir"}
@@ -427,6 +429,7 @@ MACRO {MSC3}{"Generación automática de algoritmos para el problema del vendedo
 MACRO {itor} {"\myurls{https://onlinelibrary.wiley.com/journal/14753995}{International Transactions in Operational Research}"}
 MACRO {ejor} {"\myurls{https://www.journals.elsevier.com/european-journal-of-operational-research}{European Journal of Operational Research}"}
 MACRO {asc} {"\myurls{https://www.journals.elsevier.com/applied-soft-computing/}{Applied Soft Computing}"}
+MACRO {cor} {"\myurls{https://www.sciencedirect.com/journal/computers-and-operations-research}{Computers \& Operations Research}"}
 
 FUNCTION {bibinfo.check}
 { swap$
