@@ -430,6 +430,7 @@ MACRO {itor} {"\myurls{https://onlinelibrary.wiley.com/journal/14753995}{Interna
 MACRO {ejor} {"\myurls{https://www.journals.elsevier.com/european-journal-of-operational-research}{European Journal of Operational Research}"}
 MACRO {asc} {"\myurls{https://www.journals.elsevier.com/applied-soft-computing/}{Applied Soft Computing}"}
 MACRO {cor} {"\myurls{https://www.sciencedirect.com/journal/computers-and-operations-research}{Computers \& Operations Research}"}
+MACRO {eswa} {"\myurls{https://www.sciencedirect.com/journal/expert-systems-with-applications}{Expert Systems with Applications}"}
 
 FUNCTION {bibinfo.check}
 { swap$
