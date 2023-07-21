@@ -418,6 +418,7 @@ MACRO {BSC9}{"Machine learning model to evaluate the performance of football pla
 
 MACRO {BSC10}{"Daily scheduling for the assignment of loads of work in wood plants at CMPC Maderas SpA"}
 
+MACRO {BSC11}{"A multioperator genetic algorithm for the traveling salesman problem with job-times"}
 %% M.Sc.
 
 MACRO {MSC1}{"A metaheuristic for the double traveling salesman problem with partial last-in-first-out loading constraints"}

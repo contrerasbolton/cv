@@ -416,6 +416,8 @@ MACRO {BSC9}{"Modelo de machine learning para evaluación del rendimiento de jug
 
 MACRO {BSC10}{"Planificación diaria para la asignación de cargas de trabajo en plantas de madera en CMPC Maderas SpA"}
 
+MACRO {BSC10}{"Un algoritmo genético multioperador para el problema del vendedor viajero con tiempos de trabajo"}
+
 %% M.Sc.
 
 MACRO {MSC1}{"Una metaheurística para el problema del vendedor viajero doble con restricciones de cargas parciales, el último en entrar es el primero en salir"}
