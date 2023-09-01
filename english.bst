@@ -374,6 +374,8 @@ MACRO {seoul} {"Seoul, Korea"}
 
 MACRO {marrakech} {"Marrakech, Morocco"}
 
+MACRO {ischia} {"Ischia, Italy"}
+
 %% Status
 
 MACRO {submitted} {"Under revision"}
@@ -418,7 +420,18 @@ MACRO {BSC9}{"Machine learning model to evaluate the performance of football pla
 
 MACRO {BSC10}{"Daily scheduling for the assignment of loads of work in wood plants at CMPC Maderas SpA"}
 
-MACRO {BSC11}{"A multioperator genetic algorithm for the traveling salesman problem with job-times"}
+MACRO {BSC11}{"Analysis applied to professional football leagues to assess whether loss aversion is associated with unethical behavior"}
+
+MACRO {BSC12}{"Elective surgery programming considering affinity and preferences in the surgical team"}
+
+MACRO {BSC13}{"A multioperator genetic algorithm for the traveling salesman problem with job-times"}
+
+MACRO {BSC14}{"A model and algorithm for the flexible traveling salesman problem with multiple drones"}
+
+MACRO {BSC17}{"Study of loss aversion and its influence on unethical decision-making in competitive environments"}
+
+
+
 %% M.Sc.
 
 MACRO {MSC1}{"A metaheuristic for the double traveling salesman problem with partial last-in-first-out loading constraints"}

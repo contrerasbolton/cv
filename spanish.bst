@@ -372,6 +372,8 @@ MACRO {marrakech} {"Marrakech, Marruecos"}
 
 MACRO {seoul} {"Seúl, Corea"}
 
+MACRO {ischia} {"Ischia, Italia"}
+
 %% Status
 
 MACRO {submitted} {"bajo revisión"}
@@ -416,7 +418,17 @@ MACRO {BSC9}{"Modelo de machine learning para evaluación del rendimiento de jug
 
 MACRO {BSC10}{"Planificación diaria para la asignación de cargas de trabajo en plantas de madera en CMPC Maderas SpA"}
 
-MACRO {BSC10}{"Un algoritmo genético multioperador para el problema del vendedor viajero con tiempos de trabajo"}
+MACRO {BSC11}{"Análisis aplicado a ligas de fútbol profesional para evaluar si la aversión a la pérdida se asocia a conductas poco éticas"}
+
+MACRO {BSC12}{"Planificación de cirugías electivas considerando afinidad y preferencias en el equipo quirúrgico"}
+
+MACRO {BSC13}{"Un algoritmo genético multioperador para el problema del vendedor viajero con tiempos de trabajo"}
+
+MACRO {BSC14}{"Un modelo y algoritmo para el problema flexible del vendedor viajero con múltiples drones"}
+
+MACRO {BSC17}{"Estudio de la aversión a la pérdida y su influencia en la toma de decisiones poco éticas en ambientes competitivos"}
+
+
 
 %% M.Sc.
 
