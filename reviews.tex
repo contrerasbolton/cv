@@ -28,6 +28,8 @@
 \newcommand{\JS}{\myurls{https://www.springer.com/journal/11227}{Journal of Supercomputing}}                                                                %% 26
 \newcommand{\MATHJ}{\myurls{https://www.mdpi.com/journal/mathematics}{Mathematics}}                                                                         %% 27
 \newcommand{\KBS}{\myurls{https://www.sciencedirect.com/journal/knowledge-based-systems}{Knowledge-Based Systems}}                                          %% 28
+\newcommand{\EAAI}{\myurls{https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence}{Engineering Applications of Artificial Intelligence}}                                                                                                                                              %% 29
+\newcommand{\CAOR}{\myurls{https://www.sciencedirect.com/journal/computers-and-operations-research}{Computers \& Operations Research}}                                          %% 30
 
 \newcommand{\ejor}{8}
 \newcommand{\ins}{9}
@@ -57,28 +59,38 @@
 \newcommand{\js}{1}
 \newcommand{\mathj}{3}
 \newcommand{\kbs}{1}
-
-%% Sum of reviews
-\newcommand{\Suma}{\the\numexpr \ejor + \ins + \exsy + \iei + \itor + \orij + \ijpeds + \flex + \ejie + \cin + \scj + \cmplx + \fcs + \spj + \jea + \cim + \mine + \acisc + \ijss + \jifs + \ijlsm + \proc + \aor + \tetci + \plos + \js + \mathj + \kbs \relax}
+\newcommand{\eaai}{2}
+\newcommand{\caor}{1}
 
 %% Conferences
-\newcommand{\ICPR}{\myurls{https://doi.org/10.1007/978-3-030-76307-7}{International Conference of Production Research -- Americas 2020 (ICPR)}}
+\newcommand{\ICPR}{\myurls{https://doi.org/10.1007/978-3-030-76307-7}{International Conference of Production Research}}
+\newcommand{\icpr}{1}
+
+
+%% Sum of reviews
+%% Papers
+\newcommand{\SumPaper}{\the\numexpr \ejor + \ins + \exsy + \iei + \itor + \orij + \ijpeds + \flex + \ejie + \cin + \scj + \cmplx + \fcs + \spj + \jea + \cim + \mine + \acisc + \ijss + \jifs + \ijlsm + \proc + \aor + \tetci + \plos + \js + \mathj + \kbs + \caor + \eaai \relax}
+%% Conferences
+\newcommand{\SumConference}{\the\numexpr \icpr \relax}
+
+
+
 
 %% format
 %%\newcommand{\journals}[1]{\FLEX{} (\flex), \EJOR{} (\ejor), \EXSY{} (\exsy), \INS{} (\ins), \CIN{} (\cin), \ITOR{} (\itor), \ORIJ{} (\orij), \IJPEDS{} (\ejie), \IEI{} (\iei), \EJIE{} (\ejie), \CMPLX~(\cmplx), \FCS~(\fcs), \SP~(\spj), \JEA~(\jea), \CIM~(\cim) {#1} \SC{} (\scj).}
-\newcommand{\journals}[1]{\FLEX{} (\flex), \INS{} (\ins), \EJOR{} (\ejor), \IJSS{} (\ijss), \EXSY{} (\exsy), \PROC{} (\proc), \MATHJ{} (\mathj), \TETCI{} (\tetci), \PLOS{} (\plos), \CIN{} (\cin), \MINE{} (\mine), \FCS{} (\fcs), \ACISC{} (\acisc), \SPJ{} (\spj), \AOR{} (\aor), \JEA{} (\jea), \ITOR{} (\itor), \IJPEDS{} (\ejie), \EJIE{} (\ejie), \ORIJ{} (\orij), \CMPLX{} (\cmplx), \CIM{} (\cim), \IEI{} (\iei), \IJPEDS{} (\ijpeds), \IJLSM{} (\ijlsm), \JS{} (\js), \KBS{} (\kbs), {#1} \SC{} (\scj).}
+\newcommand{\journals}[1]{\FLEX{} (\flex), \INS{} (\ins), \EJOR{} (\ejor), \IJSS{} (\ijss), \EXSY{} (\exsy), \PROC{} (\proc), \MATHJ{} (\mathj), \TETCI{} (\tetci), \PLOS{} (\plos), \CIN{} (\cin), \MINE{} (\mine), \FCS{} (\fcs), \ACISC{} (\acisc), \SPJ{} (\spj), \AOR{} (\aor), \JEA{} (\jea), \ITOR{} (\itor), \EAAI{} (\eaai), \IJPEDS{} (\ejie), \EJIE{} (\ejie), \ORIJ{} (\orij), \CMPLX{} (\cmplx), \CIM{} (\cim), \IEI{} (\iei), \IJPEDS{} (\ijpeds), \IJLSM{} (\ijlsm), \JS{} (\js), \CAOR{} (\caor), \KBS{} (\kbs), {#1} \SC{} (\scj).}
 %\newcommand{\journals}[1]{}
-\newcommand{\conferences}{\ICPR{} (1).}
+\newcommand{\conferences}{\ICPR{} (\icpr).}
 
 \es {
 %% \newpage
    \section{Actividades de revisión}
-   \cvitem{Artículos de revistas\\\Suma ~revisados}{\journals{y}}
+   \cvitem{Artículos de revistas\\\SumPaper ~revisados}{\journals{y}}
    %\cvitem{}{\journalss{y}}
-   \cvitem{Artículos de conferencias}{\conferences{}}
+   \cvitem{Artículos de conferencias\\\SumConference ~revisados}{\conferences{}}
 }{
    \section{Peer review activities}
-   \cvitem{Journal articles\\\Suma ~reviews}{\journals{and}}
+   \cvitem{Journal articles\\\SumPaper ~reviews}{\journals{and}}
    %\cvitem{}{\journalss{and}}
-   \cvitem{Conference articles}{\conferences{}}
+   \cvitem{Conference articles\\\SumConference ~reviews}{\conferences{}}
 }

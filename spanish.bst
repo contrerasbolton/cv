@@ -426,9 +426,11 @@ MACRO {BSC13}{"Un algoritmo genético multioperador para el problema del vendedo
 
 MACRO {BSC14}{"Un modelo y algoritmo para el problema flexible del vendedor viajero con múltiples drones"}
 
+MACRO {BSC16}{"Una metaheurística para el problema de clustering automático"}
+
 MACRO {BSC17}{"Estudio de la aversión a la pérdida y su influencia en la toma de decisiones poco éticas en ambientes competitivos"}
 
-
+MACRO {BSC18}{"Un modelo compacto de programación lineal entera mixta para el location-or-routing problem"}
 
 %% M.Sc.
 
@@ -445,6 +447,7 @@ MACRO {ejor} {"\myurls{https://www.journals.elsevier.com/european-journal-of-ope
 MACRO {asc} {"\myurls{https://www.journals.elsevier.com/applied-soft-computing/}{Applied Soft Computing}"}
 MACRO {cor} {"\myurls{https://www.sciencedirect.com/journal/computers-and-operations-research}{Computers \& Operations Research}"}
 MACRO {eswa} {"\myurls{https://www.sciencedirect.com/journal/expert-systems-with-applications}{Expert Systems with Applications}"}
+MACRO {ins} {"\myurls{https://www.sciencedirect.com/journal/information-sciences}{Information Sciences}"}
 
 FUNCTION {bibinfo.check}
 { swap$
