@@ -50,11 +50,11 @@
 \newcommand{\mine}{2}
 \newcommand{\acisc}{2}
 \newcommand{\jifs}{1}
-\newcommand{\ijss}{4}
+\newcommand{\ijss}{5}
 \newcommand{\ijlsm}{1}
 \newcommand{\proc}{3}
 \newcommand{\aor}{2}
-\newcommand{\tetci}{3}
+\newcommand{\tetci}{4}
 \newcommand{\plos}{3}
 \newcommand{\js}{1}
 \newcommand{\mathj}{3}
@@ -64,33 +64,36 @@
 
 %% Conferences
 \newcommand{\ICPR}{\myurls{https://doi.org/10.1007/978-3-030-76307-7}{International Conference of Production Research}}
-\newcommand{\icpr}{1}
+\newcommand{\CHCON}{\myurls{https://site.ieee.org/chilesur/ieee-chilecon-2023/}{IEEE Chilean Conference on Electrical, Electronics Engineering, Information and Communication Technologies}}
 
+
+\newcommand{\icpr}{1}
+\newcommand{\chcon}{1}
 
 %% Sum of reviews
 %% Papers
 \newcommand{\SumPaper}{\the\numexpr \ejor + \ins + \exsy + \iei + \itor + \orij + \ijpeds + \flex + \ejie + \cin + \scj + \cmplx + \fcs + \spj + \jea + \cim + \mine + \acisc + \ijss + \jifs + \ijlsm + \proc + \aor + \tetci + \plos + \js + \mathj + \kbs + \caor + \eaai \relax}
 %% Conferences
-\newcommand{\SumConference}{\the\numexpr \icpr \relax}
+\newcommand{\SumConference}{\the\numexpr \chcon + \icpr \relax}
 
 
 
 
 %% format
 %%\newcommand{\journals}[1]{\FLEX{} (\flex), \EJOR{} (\ejor), \EXSY{} (\exsy), \INS{} (\ins), \CIN{} (\cin), \ITOR{} (\itor), \ORIJ{} (\orij), \IJPEDS{} (\ejie), \IEI{} (\iei), \EJIE{} (\ejie), \CMPLX~(\cmplx), \FCS~(\fcs), \SP~(\spj), \JEA~(\jea), \CIM~(\cim) {#1} \SC{} (\scj).}
-\newcommand{\journals}[1]{\FLEX{} (\flex), \INS{} (\ins), \EJOR{} (\ejor), \IJSS{} (\ijss), \EXSY{} (\exsy), \PROC{} (\proc), \MATHJ{} (\mathj), \TETCI{} (\tetci), \PLOS{} (\plos), \CIN{} (\cin), \MINE{} (\mine), \FCS{} (\fcs), \ACISC{} (\acisc), \SPJ{} (\spj), \AOR{} (\aor), \JEA{} (\jea), \ITOR{} (\itor), \EAAI{} (\eaai), \IJPEDS{} (\ejie), \EJIE{} (\ejie), \ORIJ{} (\orij), \CMPLX{} (\cmplx), \CIM{} (\cim), \IEI{} (\iei), \IJPEDS{} (\ijpeds), \IJLSM{} (\ijlsm), \JS{} (\js), \CAOR{} (\caor), \KBS{} (\kbs), {#1} \SC{} (\scj).}
+\newcommand{\journals}[1]{\FLEX{} (\flex), \INS{} (\ins), \EJOR{} (\ejor), \IJSS{} (\ijss), \TETCI{} (\tetci), \EXSY{} (\exsy), \PROC{} (\proc), \MATHJ{} (\mathj), \PLOS{} (\plos), \CIN{} (\cin), \MINE{} (\mine), \FCS{} (\fcs), \ACISC{} (\acisc), \SPJ{} (\spj), \AOR{} (\aor), \JEA{} (\jea), \ITOR{} (\itor), \EAAI{} (\eaai), \IJPEDS{} (\ejie), \EJIE{} (\ejie), \ORIJ{} (\orij), \CMPLX{} (\cmplx), \CIM{} (\cim), \IEI{} (\iei), \IJPEDS{} (\ijpeds), \IJLSM{} (\ijlsm), \JS{} (\js), \CAOR{} (\caor), \KBS{} (\kbs), {#1} \SC{} (\scj).}
 %\newcommand{\journals}[1]{}
-\newcommand{\conferences}{\ICPR{} (\icpr).}
+\newcommand{\conferences}[1]{\CHCON{} (\chcon) {#1} \ICPR{} (\icpr).}
 
 \es {
 %% \newpage
    \section{Actividades de revisión}
    \cvitem{Artículos de revistas\\\SumPaper ~revisados}{\journals{y}}
    %\cvitem{}{\journalss{y}}
-   \cvitem{Artículos de conferencias\\\SumConference ~revisados}{\conferences{}}
+   \cvitem{Artículos de conferencias\\\SumConference ~revisados}{\conferences{y}}
 }{
    \section{Peer review activities}
    \cvitem{Journal articles\\\SumPaper ~reviews}{\journals{and}}
    %\cvitem{}{\journalss{and}}
-   \cvitem{Conference articles\\\SumConference ~reviews}{\conferences{}}
+   \cvitem{Conference articles\\\SumConference ~reviews}{\conferences{and}}
 }
