@@ -448,6 +448,7 @@ MACRO {asc} {"\myurls{https://www.journals.elsevier.com/applied-soft-computing/}
 MACRO {cor} {"\myurls{https://www.sciencedirect.com/journal/computers-and-operations-research}{Computers \& Operations Research}"}
 MACRO {eswa} {"\myurls{https://www.sciencedirect.com/journal/expert-systems-with-applications}{Expert Systems with Applications}"}
 MACRO {ins} {"\myurls{https://www.sciencedirect.com/journal/information-sciences}{Information Sciences}"}
+MACRO {mine} {"\myurls{https://www.mdpi.com/journal/minerals}{Minerals}"}
 
 FUNCTION {bibinfo.check}
 { swap$
