@@ -432,6 +432,8 @@ MACRO {BSC17}{"Estudio de la aversión a la pérdida y su influencia en la toma 
 
 MACRO {BSC18}{"Un modelo compacto de programación lineal entera mixta para el location-or-routing problem"}
 
+MACRO {BSC19}{"Un algoritmo generado automáticamente para el contextual multi-armed bandit problem"}
+
 %% M.Sc.
 
 MACRO {MSC1}{"Una metaheurística para el problema del vendedor viajero doble con restricciones de cargas parciales, el último en entrar es el primero en salir"}

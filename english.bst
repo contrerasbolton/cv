@@ -434,6 +434,8 @@ MACRO {BSC17}{"Study of loss aversion and its influence on unethical decision-ma
 
 MACRO {BSC18}{"A compact mixed-integer linear programming model for the location-or-routing problem"}
 
+MACRO {BSC19}{"An automatically generated algorithm for the contextual multi-armed bandit problem"}
+
 %% M.Sc.
 
 MACRO {MSC1}{"A metaheuristic for the double traveling salesman problem with partial last-in-first-out loading constraints"}
