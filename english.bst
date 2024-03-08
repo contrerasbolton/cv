@@ -453,6 +453,7 @@ MACRO {cor} {"\myurls{https://www.sciencedirect.com/journal/computers-and-operat
 MACRO {eswa} {"\myurls{https://www.sciencedirect.com/journal/expert-systems-with-applications}{Expert Systems with Applications}"}
 MACRO {ins} {"\myurls{https://www.sciencedirect.com/journal/information-sciences}{Information Sciences}"}
 MACRO {mine} {"\myurls{https://www.mdpi.com/journal/minerals}{Minerals}"}
+MACRO {psyc} {"\myurls{https://journals.sagepub.com/home/PSS}{Psychological Science}"}
 
 FUNCTION {bibinfo.check}
 { swap$
