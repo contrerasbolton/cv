@@ -388,15 +388,25 @@ MACRO {press} {"in press"}
 
 MACRO {ICI-UDEC} {"Industrial Engineering, Universidad de Concepción"}
 
-MACRO {MII-UDEC} {"in Industrial Engineering, Universidad de Concepción"}
+MACRO {MII-UDEC} {"M.Sc. in Industrial Engineering, Universidad de Concepción"}
 
-MACRO {MIINF-USACH} {"in Computer Science Engineering, Universidad de Santiago de Chile"} 
+MACRO {MIINF-USACH} {"M.Sc. in Computer Science Engineering, Universidad de Santiago de Chile"} 
 
 MACRO {LCC}{"B.Sc. in Computer Science, Universidad de Santiago de Chile"}
 
 %% Co-supervision
 
+MACRO {coAdvisorJO}{"co-supervised with José Oliveros"}
+
 MACRO {coAdvisorVP}{"co-supervised with Víctor Parada"}
+
+MACRO {coAdvisorJO-MR}{"co-supervised with José Oliveros and Manuel Rengifo"} 
+
+MACRO {coAdvisorGL}{"co-supervised with Guillermo Latorre"}
+
+MACRO {coAdvisorJO-MR-SA}{"co-supervised with José Oliveros, Manuel Rengifo, and Sebastián Astroza"} 
+
+MACRO {coAdvisorJCC}{"co-supervised with Juan Carlos Caro"}
 
 %% B.Sc.
 
@@ -428,6 +438,8 @@ MACRO {BSC13}{"A multioperator genetic algorithm for the traveling salesman prob
 
 MACRO {BSC14}{"A model and algorithm for the flexible traveling salesman problem with multiple drones"}
 
+MACRO {BSC15}{"A metaheuristic to solve the polynomial robust knapsack problem"}
+
 MACRO {BSC16}{"A metaheuristic for the automatic clustering problem"}
 
 MACRO {BSC17}{"Study of loss aversion and its influence on unethical decision-making in competitive environments"}
@@ -435,6 +447,8 @@ MACRO {BSC17}{"Study of loss aversion and its influence on unethical decision-ma
 MACRO {BSC18}{"A compact mixed-integer linear programming model for the location-or-routing problem"}
 
 MACRO {BSC19}{"An automatically generated algorithm for the contextual multi-armed bandit problem"}
+
+MACRO {BSC20}{"A machine learning-based algorithm for the polynomial robust knapsack problem"}
 
 %% M.Sc.
 
@@ -454,6 +468,8 @@ MACRO {eswa} {"\myurls{https://www.sciencedirect.com/journal/expert-systems-with
 MACRO {ins} {"\myurls{https://www.sciencedirect.com/journal/information-sciences}{Information Sciences}"}
 MACRO {mine} {"\myurls{https://www.mdpi.com/journal/minerals}{Minerals}"}
 MACRO {psyc} {"\myurls{https://journals.sagepub.com/home/PSS}{Psychological Science}"}
+MACRO {hcms} {"\myurls{https://link.springer.com/journal/10729}{Health Care Management Science}"}
+MACRO {pse} {"\myurls{https://www.sciencedirect.com/journal/psychology-of-sport-and-exercise}{Psychology of Sport \& Exercise}"}
 
 FUNCTION {bibinfo.check}
 { swap$
@@ -1234,8 +1250,6 @@ FUNCTION {mastersthesis}
   format.btitle
   "title" output.check
   new.block
-  bbl.mthesis format.thesis.type output.nonnull
-  new.block
   school "school" bibinfo.warn output
   address "address" bibinfo.check output
   format.date "year" output.check
@@ -1254,6 +1268,7 @@ FUNCTION {misc}
   new.block
   howpublished new.block.checka
   howpublished "howpublished" bibinfo.check output
+  address "address" bibinfo.check output
   format.date output
   format.doi output
   new.block

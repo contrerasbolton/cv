@@ -394,7 +394,17 @@ MACRO {LCC}{"Licenciatura en Ciencia de la Computación, Universidad de Santiago
 
 %% Co-supervision
 
+MACRO {coAdvisorJO}{"co-guíada con José Oliveros"}
+
 MACRO {coAdvisorVP}{"co-guíada con Víctor Parada"}
+
+MACRO {coAdvisorJO-MR}{"co-guíada con José Oliveros y Manuel Rengifo"}
+
+MACRO {coAdvisorGL}{"co-guíada con Guillermo Latorre"}
+
+MACRO {coAdvisorJO-MR-SA}{"co-guíada con José Oliveros, Manuel Rengifo y Sebastián Astroza"} 
+
+MACRO {coAdvisorJCC}{"co-guíada con Juan Carlos Caro"}
 
 %% B.Sc.
 
@@ -426,6 +436,8 @@ MACRO {BSC13}{"Un algoritmo genético multioperador para el problema del vendedo
 
 MACRO {BSC14}{"Un modelo y algoritmo para el problema flexible del vendedor viajero con múltiples drones"}
 
+MACRO {BSC15}{"Una metaheurística para resolver el polynomial robust knapsack problem"}
+
 MACRO {BSC16}{"Una metaheurística para el problema de clustering automático"}
 
 MACRO {BSC17}{"Estudio de la aversión a la pérdida y su influencia en la toma de decisiones poco éticas en ambientes competitivos"}
@@ -433,6 +445,8 @@ MACRO {BSC17}{"Estudio de la aversión a la pérdida y su influencia en la toma 
 MACRO {BSC18}{"Un modelo compacto de programación lineal entera mixta para el location-or-routing problem"}
 
 MACRO {BSC19}{"Un algoritmo generado automáticamente para el contextual multi-armed bandit problem"}
+
+MACRO {BSC20}{"Un algoritmo basado en machine learning para el problema polinomial robusto de la mochila"}
 
 %% M.Sc.
 
@@ -452,6 +466,8 @@ MACRO {eswa} {"\myurls{https://www.sciencedirect.com/journal/expert-systems-with
 MACRO {ins} {"\myurls{https://www.sciencedirect.com/journal/information-sciences}{Information Sciences}"}
 MACRO {mine} {"\myurls{https://www.mdpi.com/journal/minerals}{Minerals}"}
 MACRO {psyc} {"\myurls{https://journals.sagepub.com/home/PSS}{Psychological Science}"}
+MACRO {hcms} {"\myurls{https://link.springer.com/journal/10729}{Health Care Management Science}"}
+MACRO {pse} {"\myurls{https://www.sciencedirect.com/journal/psychology-of-sport-and-exercise}{Psychology of Sport \& Exercise}"}
 
 FUNCTION {bibinfo.check}
 { swap$
@@ -1232,8 +1248,6 @@ FUNCTION {mastersthesis}
   format.btitle
   "title" output.check
   new.block
-  bbl.mthesis format.thesis.type output.nonnull
-  new.block
   school "school" bibinfo.warn output
   address "address" bibinfo.check output
   format.date "year" output.check
@@ -1252,6 +1266,7 @@ FUNCTION {misc}
   new.block
   howpublished new.block.checka
   howpublished "howpublished" bibinfo.check output
+  address "address" bibinfo.check output
   format.date output
   format.doi output
   new.block
