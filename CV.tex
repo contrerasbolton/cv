@@ -110,10 +110,36 @@
   \toggletrue{es}
   \newdateformat{monthyeardate}{%
   \monthname[\THEMONTH] de \THEYEAR}
+
+  \newcommand{\jan}{enero~}
+  \newcommand{\feb}{febrero~}
+  \newcommand{\mar}{marzo~}
+  \newcommand{\apr}{abril~}
+  \newcommand{\may}{mayo~}
+  \newcommand{\jun}{junio~}
+  \newcommand{\jul}{julio~}  
+  \newcommand{\aug}{agosto~}
+  \newcommand{\sep}{septiembre~}
+  \newcommand{\oct}{octubre~}
+  \newcommand{\nov}{noviembre~}
+  \newcommand{\dec}{diciembre~}
 }{
   \newdateformat{monthyeardate}{%
   \monthname[\THEMONTH] \THEYEAR}
   \togglefalse{es}
+  
+  \newcommand{\jan}{January~}
+  \newcommand{\feb}{February~}
+  \newcommand{\mar}{March~}
+  \newcommand{\apr}{April~}
+  \newcommand{\may}{May~}
+  \newcommand{\jun}{June~}
+  \newcommand{\jul}{July~}
+  \newcommand{\aug}{August~}
+  \newcommand{\sep}{September~}
+  \newcommand{\oct}{October~}
+  \newcommand{\nov}{November~}
+  \newcommand{\dec}{December~}
 }
 
 \ifthenelse{\equal{\detokenize{shortCV_en}}{\jobname}}{
@@ -171,17 +197,17 @@
   }
   \es{
     \section{Posición actual}
-    \cventry{Desde enero 2020}{Profesor Asistente}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{}{}
+    \cventry{Desde \jan 2020}{Profesor Asistente}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{}{}
   }{
     \section{Current position}
-    \cventry{From January 2020}{Assistant Professor}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{}{}
+    \cventry{From \jan 2020}{Assistant Professor}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{}{}
   }
 
 \es {
   \section{Formación académica}
   \cventry{2016 -- 2018}{Dottore di Ricerca in Ingegneria Biomedica, Elettrica e dei Sistemi}{Doctor en Ingeniería Biomédica, Eléctrica y de Sistemas}{Università di Bologna}{Italia. Especialización en Investigación de Operaciones.}{
     Tesis: ``Algorithms for Variants of Routing Problems''. \newline
-    Supervisores: Paolo Toth - Valentina Cacchiani - Daniele Vigo %La defensa tendrá lugar en marzo 2019
+    Supervisores: Paolo Toth - Valentina Cacchiani - Daniele Vigo %La defensa tendrá lugar en \mar 2019
 }
   \cventry{2011 -- 2013}{Magíster en Ingeniería Informática}{Universidad de Santiago de
     Chile.}{}{}{Tesis: ``Combinación Automática de Operadores de un Algoritmo Genético
@@ -222,31 +248,31 @@
 \es
 {
   \section{Posiciones pasadas}
-  \cventry{marzo 2019 -- enero 2020}{Investigador Postdoctoral y Profesor part-time}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile.}{}{}
-  \cventry{noviembre 2015 -- octubre 2018}{Estudiante de Doctorado}{Dottorato di Ricerca in Ingegneria Biomedica, Elettrica, dei Sistemi}{Dipartimento
+  \cventry{\mar 2019 -- \jan 2020}{Investigador Postdoctoral y Profesor part-time}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile.}{}{}
+  \cventry{\nov 2015 -- \oct 2018}{Estudiante de Doctorado}{Dottorato di Ricerca in Ingegneria Biomedica, Elettrica, dei Sistemi}{Dipartimento
   di Ingegneria dell’Energia Elettrica e dell’Informazione ``Guglielmo Marconi''}{Università di Bologna.}{}
-  \cventry{julio 2015 -- octubre 2015}{Desarrollador de software y Asistente de Investigación}{Instituto Sistemas Complejos de Ingeniería.}{}{}{}
-  \cventry{agosto 2012 -- septiembre 2015}{Profesor part-time}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile.}{}{}
-  \cventry{marzo 2012 -- julio 2015}{Profesor part-time}{Facultad de Ingeniería}{Universidad Andrés Bello.}{}{}
-  \cventry{marzo 2012 -- diciembre 2012}{Ayudante}{Ingeniería Civil en Informática}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile.}{}
-  \cventry{agosto 2011 -- agosto 2012}{Ayudante}{Facultad de Ingeniería}{Universidad Andrés Bello.}{}{}
-  \cventry{mayo 2010 -- febrero 2011}{Desarrollador de sistema}{SubDirección de Operación y Plataforma}{Dirección de Informática}{Pontificia Universidad Católica de Chile.}{}{}{}
-  \cventry{marzo 2010 -- diciembre 2010}{Ayudante}{Departamento de Ingeniería Metalúrgica}{Universidad de Santiago de Chile.}{}{}
-  \cventry{julio 2009 -- diciembre 2013}{Ayudante de Investigación}{Grupo de Optimización}{Departamento de Informática}{Universidad de Santiago de Chile.}{}
+  \cventry{\jul 2015 -- \oct 2015}{Desarrollador de software y Asistente de Investigación}{Instituto Sistemas Complejos de Ingeniería.}{}{}{}
+  \cventry{\aug 2012 -- \sep 2015}{Profesor part-time}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile.}{}{}
+  \cventry{\mar 2012 -- \jul 2015}{Profesor part-time}{Facultad de Ingeniería}{Universidad Andrés Bello.}{}{}
+  \cventry{\mar 2012 -- \dec 2012}{Ayudante}{Ingeniería Civil en Informática}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile.}{}
+  \cventry{\aug 2011 -- \aug 2012}{Ayudante}{Facultad de Ingeniería}{Universidad Andrés Bello.}{}{}
+  \cventry{\may 2010 -- \feb 2011}{Desarrollador de sistema}{SubDirección de Operación y Plataforma}{Dirección de Informática}{Pontificia Universidad Católica de Chile.}{}{}{}
+  \cventry{\mar 2010 -- \dec 2010}{Ayudante}{Departamento de Ingeniería Metalúrgica}{Universidad de Santiago de Chile.}{}{}
+  \cventry{\jul 2009 -- \dec 2013}{Ayudante de Investigación}{Grupo de Optimización}{Departamento de Informática}{Universidad de Santiago de Chile.}{}
 }
 {
   \section{Past positions}
-  \cventry{March 2019 -- January 2020}{Postdoctoral Researcher and Lecturer}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile.}{}{}
-  \cventry{November 2015 -- October 2018}{Ph.D. Student}{Ph.D. Programme Biomedical, Electrical and System Engineering}{Dipartimento
+  \cventry{\mar 2019 -- \jan 2020}{Postdoctoral Researcher and Lecturer}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile.}{}{}
+  \cventry{\nov 2015 -- \oct 2018}{Ph.D. Student}{Ph.D. Programme Biomedical, Electrical and System Engineering}{Dipartimento
   di Ingegneria dell’Energia Elettrica e dell’Informazione ``Guglielmo Marconi''}{Università di Bologna.}{}
-  \cventry{July 2015 -- October 2015}{Software Developer and Research Assistant}{Instituto Sistemas Complejos de Ingeniería.}{}{}{}
-  \cventry{August 2012 -- September 2015}{Part-time Lecturer}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile.}{}{}
-  \cventry{March 2012 -- July 2015}{Part-time Lecturer}{Facultad de Ingeniería}{Universidad Andrés Bello.}{}{}
-  \cventry{March 2012 -- December 2012}{Teaching Assistant}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile.}{}{}
-  \cventry{August 2011 -- August 2012}{Teaching Assistant}{Facultad de Ingeniería}{Universidad Andrés Bello.}{}{}{}
-  \cventry{May 2010 -- February 2011}{System Developer}{Section of Operation and Platform}{Dirección de Informática}{Pontificia Universidad Católica de Chile.}{}
-  \cventry{March 2010 -- December 2010}{Teaching Assistant}{Departamento de Ingeniería Metalúrgica}{Universidad de Santiago de Chile.}{}{}
-  \cventry{July 2009 -- December 2013}{Research Assistant in Optimization Group}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile.}{}{}
+  \cventry{\jul 2015 -- \oct 2015}{Software Developer and Research Assistant}{Instituto Sistemas Complejos de Ingeniería.}{}{}{}
+  \cventry{\aug 2012 -- \sep 2015}{Part-time Lecturer}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile.}{}{}
+  \cventry{\mar 2012 -- \jul 2015}{Part-time Lecturer}{Facultad de Ingeniería}{Universidad Andrés Bello.}{}{}
+  \cventry{\mar 2012 -- \dec 2012}{Teaching Assistant}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile.}{}{}
+  \cventry{\aug 2011 -- \aug 2012}{Teaching Assistant}{Facultad de Ingeniería}{Universidad Andrés Bello.}{}{}{}
+  \cventry{\may 2010 -- \feb 2011}{System Developer}{Section of Operation and Platform}{Dirección de Informática}{Pontificia Universidad Católica de Chile.}{}
+  \cventry{\mar 2010 -- \dec 2010}{Teaching Assistant}{Departamento de Ingeniería Metalúrgica}{Universidad de Santiago de Chile.}{}{}
+  \cventry{\jul 2009 -- \dec 2013}{Research Assistant in Optimization Group}{Departamento de Ingeniería Informática}{Universidad de Santiago de Chile.}{}{}
 }
 \short{
 }
@@ -365,15 +391,15 @@
 \es{
 %% \newpage
   \section{Premios y reconocimientos}
-  \cventry{noviembre 2015}{Beca Doctorado en el extranjero - Beca Chile
+  \cventry{\nov 2015}{Beca Doctorado en el extranjero - Beca Chile
     2015}{Comisión Nacional de Investigación Científica y Tecnológica
     (CONICYT).}{}{}{Beca para realizar estudios conducentes a la obtención del
     grado académico de Doctor en instituciones de excelencia en el exterior.}
-  \cventry{julio 2013}{Google Scholars' Retreat}{Google.}{}{}{Como becario de
+  \cventry{\jul 2013}{Google Scholars' Retreat}{Google.}{}{}{Como becario de
     Google Latam me invitaron a la oficina de Google en Nueva York con otros
     becarios de América Latina y EE.UU. para celebrar los logros, interactuar
     con otros estudiosos, y escuchar charlass de los ingenieros de Google.}
-  \cventry{marzo 2013}{Google USACH Scholarship}{Google.}{}{}{Premiado con la
+  \cventry{\mar 2013}{Google USACH Scholarship}{Google.}{}{}{Premiado con la
     beca Google en el marco del convenio Google University Programs que busca
     recompensar a estudiantes de diversos orígenes para incentivar la
     excelencia en los estudios y promover que se conviertan en modelos de rol y
@@ -381,14 +407,14 @@
 }{
 %%\newpage
   \section{Honors and awards}
-  \cventry{November 2015}{Ph.D. scholarship abroad - Beca Chile 2015}{Comisión
+  \cventry{\nov 2015}{Ph.D. scholarship abroad - Beca Chile 2015}{Comisión
     Nacional de Investigación Científica y Tecnológica
     (CONICYT).}{}{}{Scholarship for studying the academic degree of Doctor of institutions of excellence abroad.}
-  \cventry{July 2013}{Google Scholars' Retreat}{Google.}{}{}{As a Google Latam
+  \cventry{\jul 2013}{Google Scholars' Retreat}{Google.}{}{}{As a Google Latam
     scholarship recipient I was invited to a Google office in NYC with other
     recipients from Latin America and USA to celebrate accomplishments,
     interact with fellow scholars, and hear talks from Google engineers.}
-  \cventry{March 2013}{Google Latin America Scholarship}{Google.}{}{}{Scholarships awarded
+  \cventry{\mar 2013}{Google Latin America Scholarship}{Google.}{}{}{Scholarships awarded
     based on the strength of academic background and demonstrated passion for
     Computer Science.}
 }
@@ -397,31 +423,31 @@
 }{
 \es{
   \section{Asistencias a escuelas}
-  \cventry{enero 2017}{Winter School on Network Optimization $6^{th}$ edition}{Centro de Matemática,
+  \cventry{\jan 2017}{Winter School on Network Optimization $6^{th}$ edition}{Centro de Matemática,
     Aplicações Fundamentais e Investigação Operacional}{Faculdade de Ciências, Universidade de
     Lisboa}{Estoril, Portugal.}{Conferencias de Ángel Corberán, Arie Koster, Gerhard Reinelt, Giovanni
     Rinaldi y José Valério de Carvalho.}
 
-  \cventry{agosto 2016}{Prague Summer Schools on Discrete Mathematics}{Mathematical Institute of the
+  \cventry{\aug 2016}{Prague Summer Schools on Discrete Mathematics}{Mathematical Institute of the
     Czech Academy of Sciences and Computer Science Institute of Charles University}{}{Praga, República
     Checa}{Conferencias de Ronald de Wolf y Samuel Fiorini.}
 
-  \cventry{junio 2016}{COST/MINO Ph.D. School on Advanced Optimization Methods 2016}{Istituto di Analisi
+  \cventry{\jun 2016}{COST/MINO Ph.D. School on Advanced Optimization Methods 2016}{Istituto di Analisi
     dei Sistemi ed Informatica ``A. Ruberti''}{Consiglio Nazionale delle Ricerche}{Roma,
     Italia}{Conferencias de Santanu S. Dey, Jordi Castro, Antonio Frangioni y Veronica Piccialli.}
 }
 {
   \section{Schools attended}
-  \cventry{January 2017}{Winter School on Network Optimization $6^{th}$ edition}{Centro de Matemática,
+  \cventry{\jan 2017}{Winter School on Network Optimization $6^{th}$ edition}{Centro de Matemática,
     Aplicações Fundamentais e Investigação Operacional}{Faculdade de Ciências, Universidade de
     Lisboa}{Estoril, Portugal.}{Lectures by Ángel Corberán, Arie Koster, Gerhard Reinelt, Giovanni
     Rinaldi and José Valério de Carvalho.}
 
-  \cventry{August 2016}{Prague Summer Schools on Discrete Mathematics}{Mathematical Institute of the
+  \cventry{\aug 2016}{Prague Summer Schools on Discrete Mathematics}{Mathematical Institute of the
     Czech Academy of Sciences and Computer Science Institute of Charles University}{}{Prague, Czech
     Republic}{Lectures by Ronald de Wolf and Samuel Fiorini.}
 
-  \cventry{June 2016}{COST/MINO Ph.D. School on Advanced Optimization Methods 2016}{Istituto di Analisi
+  \cventry{\jun 2016}{COST/MINO Ph.D. School on Advanced Optimization Methods 2016}{Istituto di Analisi
     dei Sistemi ed Informatica ``A. Ruberti''}{Consiglio Nazionale delle Ricerche}{Roma,
     Italy}{Lectures by Santanu S. Dey, Jordi Castro, Antonio Frangioni and Veronica Piccialli.}
 }
@@ -429,26 +455,26 @@
 \es
 {
   \section{Posiciones de visitante}
-  \cventry{diciembre 2018}{Universidad del Bío-Bío.}{}{}{}{Investigador Visitante en el Departmento de
+  \cventry{\dec 2018}{Universidad del Bío-Bío.}{}{}{}{Investigador Visitante en el Departmento de
     Industrial Engineering Ingeniería Industrial. Trabajando con Rodrigo Linfati.}
 }
 {
   \section{Visiting positions}
-  \cventry{December 2018}{Universidad del Bío-Bío.}{}{}{}{Visiting Researcher at the Department of
+  \cventry{\dec 2018}{Universidad del Bío-Bío.}{}{}{}{Visiting Researcher at the Department of
     Industrial Engineering. Working with Rodrigo Linfati.}
 }
 
 \es
 {
   \section{Charlas invitadas}
-  \cventry{enero 2022}{``¿Cómo las matemáticas mejoran nuestra vida?: Optimizando la realidad''.}{}{}{}{Explora RM Sur Oriente.}
-  \cventry{diciembre 2018}{``Algorithms for Variants of Routing Problems''.}{}{}{}{Universidad de
+  \cventry{\jan 2022}{``¿Cómo las matemáticas mejoran nuestra vida?: Optimizando la realidad''.}{}{}{}{Explora RM Sur Oriente.}
+  \cventry{\dec 2018}{``Algorithms for Variants of Routing Problems''.}{}{}{}{Universidad de
     Santiago de Chile, Departamento de Matemática y Ciencia de la Computación.}
 }
 {
   \section{Invited talks}
-  \cventry{January 2022}{``How does mathematics improve our lives?: Optimizing reality''.}{}{}{}{Explora RM Sur Oriente.}
-  \cventry{December 2018}{``Algorithms for Variants of Routing Problems''.}{}{}{}{Universidad de
+  \cventry{\jan 2022}{``How does mathematics improve our lives?: Optimizing reality''.}{}{}{}{Explora RM Sur Oriente.}
+  \cventry{\dec 2018}{``Algorithms for Variants of Routing Problems''.}{}{}{}{Universidad de
     Santiago de Chile, Department of Mathematics and Computer Science.}
 }
 
@@ -469,18 +495,18 @@
 \es{
 %\newpage
   \section{Afiliaciones}
-  \cventry{July 2023 -- Present}{Association for Computing Machinery (ACM)}{Sociedad de computación más grande del mundo}{Miembro.}{}{}
-  \cventry{marzo 2012 -- a la fecha}{Instituto Chileno de Investigación de Operaciones (ICHIO)}{Sociedad Chilena de Investigación Operativa}{Miembro.}{}{}
-  \cventry{septiembre 2016 -- diciembre 2018}{Associazione Italiana di Ricerca Operativa (AIRO)}{Sociedad Italiana de Investigación Operativa}{Miembro.}{}{}
-  \cventry{agosto 2008 -- marzo 2015}{POS RIZOMA COMERCIO}{Proyecto de Software Libre}{Software de Gestión de Pymes}{Desarrollador.}{}
+  \cventry{\jul 2023 -- Present}{Association for Computing Machinery (ACM)}{Sociedad de computación más grande del mundo}{Miembro.}{}{}
+  \cventry{\mar 2012 -- a la fecha}{Instituto Chileno de Investigación de Operaciones (ICHIO)}{Sociedad Chilena de Investigación Operativa}{Miembro.}{}{}
+  \cventry{\sep 2016 -- \dec 2018}{Associazione Italiana di Ricerca Operativa (AIRO)}{Sociedad Italiana de Investigación Operativa}{Miembro.}{}{}
+  \cventry{\aug 2008 -- \mar 2015}{POS RIZOMA COMERCIO}{Proyecto de Software Libre}{Software de Gestión de Pymes}{Desarrollador.}{}
 }
 {
 %%\newpage
   \section{Affiliations}
-  \cventry{July 2023 -- Present}{Association for Computing Machinery (ACM)}{The world's largest computing society}{Member.}{}{}
-  \cventry{March 2012 -- Present}{Instituto Chileno de Investigación de Operaciones (ICHIO)}{Chilean Operations Research Society}{Member.}{}{}
-  \cventry{September 2016 -- December 2018}{Associazione Italiana di Ricerca Operativa (AIRO)}{Italian Operations Research Society}{Member.}{}{}
-  \cventry{August 2008 -- March 2015}{POS RIZOMA COMERCIO}{Project of Free Software}{SMEs Management Software}{Developer.}{}
+  \cventry{\jul 2023 -- Present}{Association for Computing Machinery (ACM)}{The world's largest computing society}{Member.}{}{}
+  \cventry{\mar 2012 -- Present}{Instituto Chileno de Investigación de Operaciones (ICHIO)}{Chilean Operations Research Society}{Member.}{}{}
+  \cventry{\sep 2016 -- \dec 2018}{Associazione Italiana di Ricerca Operativa (AIRO)}{Italian Operations Research Society}{Member.}{}{}
+  \cventry{\aug 2008 -- \mar 2015}{POS RIZOMA COMERCIO}{Project of Free Software}{SMEs Management Software}{Developer.}{}
 }
 }
 

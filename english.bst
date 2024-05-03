@@ -376,6 +376,8 @@ MACRO {marrakech} {"Marrakech, Morocco"}
 
 MACRO {ischia} {"Ischia, Italy"}
 
+MACRO {copenhagen} {"Copenhagen, Denmark"}
+
 %% Status
 
 MACRO {submitted} {"Under revision"}
