@@ -450,6 +450,8 @@ MACRO {BSC19}{"Un algoritmo generado automáticamente para el contextual multi-a
 
 MACRO {BSC20}{"Un algoritmo basado en machine learning para el problema polinomial robusto de la mochila"}
 
+MACRO {BSC21}{"Optimización del plan de producción en plantas de madera en CMPC Maderas SpA"}
+
 %% M.Sc.
 
 MACRO {MSC1}{"Una metaheurística para el problema del vendedor viajero doble con restricciones de cargas parciales, el último en entrar es el primero en salir"}

@@ -452,6 +452,8 @@ MACRO {BSC19}{"An automatically generated algorithm for the contextual multi-arm
 
 MACRO {BSC20}{"A machine learning-based algorithm for the polynomial robust knapsack problem"}
 
+MACRO {BSC21}{"Optimization of the production plan in wood plants at CMPC Maderas SpA"}
+
 %% M.Sc.
 
 MACRO {MSC1}{"A metaheuristic for the double traveling salesman problem with partial last-in-first-out loading constraints"}
