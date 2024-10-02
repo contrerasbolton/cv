@@ -1,16 +1,16 @@
 {
 \def\thing{0}
 
-  \newcommand{\PTp}{5}  %% Memorias de título en progreso
-  \newcommand{\PTf}{21} %% Memorias de título finalizadas
+  \newcommand{\PTp}{3}  %% Memorias de título en progreso
+  \newcommand{\PTf}{23} %% Memorias de título finalizadas
   \newcommand{\MTp}{3}  %% Tesis de magíster en progreso
-  \newcommand{\MTf}{2}  %% Tesis de magíster finalizadas
+  \newcommand{\MTf}{4}  %% Tesis de magíster finalizadas
   \newcommand{\cMTf}{1} %% Tesis de co-guía magíster finalizadas
   \newcommand{\DTp}{0}  %% Tesis de doctorado en progreso
   \newcommand{\DTf}{0}  %% Tesis de doctorado finalizadas
   \newcommand{\cDTp}{1} %% Tesis de co-guía doctorado en progreso
   
-  \newcommand{\MTr}{33} %% Memorias de título revisadas
+  \newcommand{\MTr}{41} %% Memorias de título revisadas
   \newcommand{\TMr}{18} %% Tesis de magíster revisadas
   \newcommand{\TDr}{00} %% Tesis de doctorado revisadas
 
@@ -22,14 +22,14 @@
 \es{
     \section{Memorias de título y tesis supervisadas}
     \cvitem{En progreso}{\printEstudiantes{\PTp{}}{pregrado}\ifthenelse{\equal{\thing}{\MTp}}{}{, \printEstudiantes{\MTp}{magíster}}\ifthenelse{\equal{\thing}{\cDTp}}{}{ y \printEstudiantes{\cMTf}{doctorado co-guíado}}.}
-    \cvitem{Finalizadas}{\printEstudiantes{\PTf{}}{pregrado}, \printEstudiantes{\MTf}{magíster} y \printEstudiantes{\cMTf}{magíster co-guíado}.}
+    \cvitem{Finalizadas}{\printEstudiantes{\PTf{}}{pregrado} y \printEstudiantes{\MTf}{magíster}.}
     \section{Comisión evaluadora de memorias de título y tesis}
     \cvitem{}{\MTr ~Memorias de título y \TMr ~tesis de magíster.}
     
   }{
     \section{Supervised final undergraduate projects and theses}
     \cvitem{Ongoing}{\printStudents{\PTp{}}{undergraduate}\ifthenelse{\equal{\thing}{\MTp}}{}{, \printStudents{\MTp}{M.Sc.}}\ifthenelse{\equal{\thing}{\cDTp}}{}{ and \printStudents{\cMTf}{co-supervised Ph.D.}}.}
-    \cvitem{Finished}{\printStudents{\PTf{}}{undergraduate}, \printStudents{\MTf}{M.Sc.} and \printStudents{\cMTf}{co-supervised M.Sc.}.}
+    \cvitem{Finished}{\printStudents{\PTf{}}{undergraduate} and \printStudents{\MTf}{M.Sc.}.}
     \section{Final undergraduate projects and theses assessment committee}
     \cvitem{}{\MTr ~final undergraduate projects and \TMr ~M.Sc. theses.}
   }

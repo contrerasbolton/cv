@@ -408,6 +408,8 @@ MACRO {coAdvisorJO-MR-SA}{"co-guíada con José Oliveros, Manuel Rengifo y Sebas
 
 MACRO {coAdvisorJCC}{"co-guíada con Juan Carlos Caro"}
 
+MACRO {coAdvisorRM}{"co-guíada con Rosa Medina"}
+
 %% B.Sc.
 
 MACRO {BSC1}{"Una metaheurística para resolver el problema de reasignación de máquinas de {G}oogle"}
@@ -452,6 +454,10 @@ MACRO {BSC20}{"Un algoritmo basado en machine learning para el problema polinomi
 
 MACRO {BSC21}{"Optimización del plan de producción en plantas de madera en CMPC Maderas SpA"}
 
+MACRO {BSC22}{"Modelo y resolución para el problema de migración de tarjetas sim de PedidosYa"}
+
+MACRO {BSC23}{"Metaheurı́stica multiobjetivo para support vector machines con feature selection"}
+
 %% M.Sc.
 
 MACRO {MSC1}{"Una metaheurística para el problema del vendedor viajero doble con restricciones de cargas parciales, el último en entrar es el primero en salir"}
@@ -459,6 +465,8 @@ MACRO {MSC1}{"Una metaheurística para el problema del vendedor viajero doble co
 MACRO {MSC2}{"Programando cirugı́as electivas para un hospital público de {C}hile con afinidad en equipos quirúrgicos y capacidad de unidades {UCI}"}
 
 MACRO {MSC3}{"Generación automática de algoritmos para el problema del vendedor viajero con tiempo de servicio en los nodos"}
+
+MACRO {MSC4}{"Una matheurística para el problema del vendedor viajero con múltiples drones"}
 
 %% Journals
 
@@ -472,6 +480,9 @@ MACRO {mine} {"\myurls{https://www.mdpi.com/journal/minerals}{Minerals}"}
 MACRO {psyc} {"\myurls{https://journals.sagepub.com/home/PSS}{Psychological Science}"}
 MACRO {hcms} {"\myurls{https://link.springer.com/journal/10729}{Health Care Management Science}"}
 MACRO {pse} {"\myurls{https://www.sciencedirect.com/journal/psychology-of-sport-and-exercise}{Psychology of Sport \& Exercise}"}
+MACRO {esmq} {"\myurls{https://www.tandfonline.com/journals/resm20}{European Sport Management Quarterly}"}
+MACRO {eaai} {"\myurls{https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence}{Engineering Applications of Artificial Intelligence}"}
+MACRO {kbs} {"\myurls{https://www.sciencedirect.com/journal/knowledge-based-systems}{Knowledge-Based Systems}"}
 
 FUNCTION {bibinfo.check}
 { swap$

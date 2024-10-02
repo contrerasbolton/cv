@@ -410,6 +410,8 @@ MACRO {coAdvisorJO-MR-SA}{"co-supervised with José Oliveros, Manuel Rengifo, an
 
 MACRO {coAdvisorJCC}{"co-supervised with Juan Carlos Caro"}
 
+MACRO {coAdvisorRM}{"co-supervised with Rosa Medina"}
+
 %% B.Sc.
 
 MACRO {BSC1}{"A metaheuristic for solving the {G}oogle machine reassignment problem"}
@@ -454,6 +456,10 @@ MACRO {BSC20}{"A machine learning-based algorithm for the polynomial robust knap
 
 MACRO {BSC21}{"Optimization of the production plan in wood plants at CMPC Maderas SpA"}
 
+MACRO {BSC22}{"Model and resolution for the sim card migration problem in PedidosYa"}
+
+MACRO {BSC23}{"Multi-objective metaheuristic for support vector machines with feature selection"}
+
 %% M.Sc.
 
 MACRO {MSC1}{"A metaheuristic for the double traveling salesman problem with partial last-in-first-out loading constraints"}
@@ -461,6 +467,8 @@ MACRO {MSC1}{"A metaheuristic for the double traveling salesman problem with par
 MACRO {MSC2}{"Elective surgery programming at a public hospital in {C}hile considering the affinity of surgical team and limited {ICU} capacity"}
 
 MACRO {MSC3}{"Automatic generation of algorithms for the traveling salesman problem with time-dependent service times"}
+
+MACRO {MSC4}{"A matheuristic for the traveling salesman problem with multiple drones"}
 
 %% Journals
 
@@ -474,6 +482,9 @@ MACRO {mine} {"\myurls{https://www.mdpi.com/journal/minerals}{Minerals}"}
 MACRO {psyc} {"\myurls{https://journals.sagepub.com/home/PSS}{Psychological Science}"}
 MACRO {hcms} {"\myurls{https://link.springer.com/journal/10729}{Health Care Management Science}"}
 MACRO {pse} {"\myurls{https://www.sciencedirect.com/journal/psychology-of-sport-and-exercise}{Psychology of Sport \& Exercise}"}
+MACRO {esmq} {"\myurls{https://www.tandfonline.com/journals/resm20}{European Sport Management Quarterly}"}
+MACRO {eaai} {"\myurls{https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence}{Engineering Applications of Artificial Intelligence}"}
+MACRO {kbs} {"\myurls{https://www.sciencedirect.com/journal/knowledge-based-systems}{Knowledge-Based Systems}"}
 
 FUNCTION {bibinfo.check}
 { swap$
