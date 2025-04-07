@@ -10,20 +10,18 @@
 % moderncv themes
 \moderncvtheme{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
 % \moderncvtheme[green]{classic}                % idem
-\usepackage{fontawesome}
 \usepackage{luatexbase}
 \usepackage{microtype}
-
 \usepackage[utf8]{inputenc}                   % replace by the encoding you are using
 \usepackage[english, spanish]{babel}
 \usepackage{datetime}
 \usepackage[numbers]{natbib}
 \usepackage[resetlabels]{multibib}
-
 %%%------------------------------------------------------------------
 %%% Reverse numbering of bibliography
 \usepackage{etaremune}
 \usepackage{etoolbox}
+
 \makeatletter
 \AtBeginDocument{%%% natbib redefines the environment there
 \renewenvironment{thebibliography}[1]
@@ -60,6 +58,7 @@
 \usepackage{footmisc} % enabling footnotes.
 \usepackage{academicons}
 \usepackage{ifthen}
+\usepackage{fontawesome}
 
 \recomputelengths                             % required when changes are made to page layout lengths
 
@@ -177,7 +176,7 @@
 \section{
   \myurls{https://scholar.google.es/citations?user=hIl4ixAAAAAJ\&hl}{\aiGoogleScholar} ~~~~
   \myurls{https://www.scopus.com/authid/detail.uri?authorId=55097104500}{\aiScopusSquare} ~~~~
-  \myurls{https://www.webofscience.com/wos/author/record/706245}{\aiPublons} ~~~~
+  \myurls{https://www.webofscience.com/wos/author/record/706245}{\aiClarivate} ~~~~
   \myurls{https://www.researchgate.net/profile/Carlos\_Contreras\_Bolton}{\aiResearchGate} ~~~~
   \myurls{https://orcid.org/0000-0001-9549-4143}{\aiOrcid} ~~~~
   \myurls{https://dblp.org/pers/hd/b/Bolton:Carlos\_Contreras}{\aidblp} ~~~~
@@ -281,28 +280,29 @@
 \es{
 \section{Nombramientos docentes y académicos}
 \cventry{Desde \sep 2024}{Jefe de Carrera}{Ingeniería Civil Industrial}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{} 
-\cventry{Desde 2024}{Profesor Colaborador}{Doctorado en Ciencias de la Computación}{Departamento de Ingeniería Informática y Ciencias de la Computación}{Universidad de Concepción.}{} % 3 años, desde 05/08/2024.
+\cventry{Desde 2025}{Profesor Claustro}{Doctorado en Ingeniería Industrial}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{} % 2 años, desde 07/03/2022. claustro 3 años, desde 21/01/2025.
+\cventry{Desde 2024}{Profesor Colaborador}{Doctorado en Ciencias de la Computación}{Departamento de Ingeniería Informática y Ciencias de la Computación}{Universidad de Concepción.}{} % colaborarodor 3 años, desde 05/08/2024. 
 \cventry{Desde 2024}{Profesor Claustro}{Magíster en Ciencias de la Computación}{Departamento de Ingeniería Informática y Ciencias de la Computación}{Universidad de Concepción.}{} % 3 años, desde 25/01/2024.
-\cventry{Desde 2022}{Profesor Colaborador}{Doctorado en Ingeniería Industrial}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{} % 2 años, desde 07/03/2022.
 \cventry{Desde 2021}{Profesor Claustro}{Magíster en Ingeniería Industrial}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{} % 3 años, desde 02/03/2021.
 \cventry{Desde 2020}{Profesor Asistente}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{}{}
 
 \section{Servicios docentes}
 \cventry{Desde 2020}{Miembro del comité de Magíster en Ingeniería Industrial}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{}{}
-\cventry{Desde 2022}{Miembro del comité de carrera de Ingeniería Industrial}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{}{}
+\cventry{Desde 2022}{Miembro del comité de carrera de Ingeniería Civil Industrial}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{}{}
 
+%%\newpage
 \section{Preparación en docencia}
     \cventry{2021}{Diplomado en formación, aprendizaje y evaluación en educación superior}{Universidad de Concepción.}{}{}{}
 %%\newpage
 \section{Experiencia en docencia}
   \subsection{Universidad de Concepción}
     \cventry{2024}{Tópicos en Optimización Combinatoria}{Doctorado y Magíster en Ciencias de la Computación}{Departamento de Ingeniería Informática y Ciencias de la Computación}{impartida como Profesor en 2024-2.}{}
-    \cventry{2024}{Optimization}{Diplomado en Inteligencia Artificial}{Departamento de Ingeniería Informática y Ciencias de la Computación}{impartida como Profesor en 2024-2.}{}
+    \cventry{2024}{Optimización}{Diplomado en Inteligencia Artificial}{Departamento de Ingeniería Informática y Ciencias de la Computación}{impartida como Profesor en 2024-2.}{}
     \cventry{2022}{Introducción a la Innovación en Ingeniería}{a varias Ingenierías Civiles}{Facultad de Ingeniería}{impartida como Profesor en 2022-2.}{}
     \cventry{2020}{Algoritmos Modernos para Producción}{Doctorado y Magíster en Ingeniería Industrial}{Departamento de Ingeniería Industrial}{impartida conjuntamente con la Prof. Rosa Medina y Prof. Lorena Pradenas en 2020-2, 2021-2, 2022-2, 2023-2 y 2024-2.}{}
-    \cventry{2020}{Modelos Determinísticos en Investigación de Operaciones}{Doctorado y Magíster en Ingeniería Industrial}{Departamento de Ingeniería Industrial}{impartida conjuntamente con la Prof. Rosa Medina y la Prof. Lorena Pradenas en 2020-1, 2021-1, 2022-1, 2023-1 y 2024-1.}{}
-    \cventry{2020}{Programación Aplicada a la Ingeniería Industrial}{Ingeniería Civil Industrial}{Departamento de Ingeniería Industrial}{impartida como Profesor en 2020-2, 2021-1, 2021-2, 2022-1, 2022-2, 2023-1, 2023-2, 2024-1 y 2024-2.}{}
-    \cventry{2020}{Optimización I}{Ingeniería Civil Industrial}{Departamento de Ingeniería Industrial}{impartida conjuntamente con la Prof. Rosa Medina en 2020-1, 2021-1, 2022-1, 2023-1 y 2024-1.}{}
+    \cventry{2020}{Modelos Determinísticos en Investigación de Operaciones}{Doctorado y Magíster en Ingeniería Industrial}{Departamento de Ingeniería Industrial}{impartida conjuntamente con la Prof. Rosa Medina y la Prof. Lorena Pradenas en 2020-1, 2021-1, 2022-1, 2023-1, 2024-1 y 2025-1.}{}
+    \cventry{2020}{Programación Aplicada a la Ingeniería Industrial}{Ingeniería Civil Industrial}{Departamento de Ingeniería Industrial}{impartida como Profesor en 2020-2, 2021-1, 2021-2, 2022-1, 2022-2, 2023-1, 2023-2, 2024-1, 2024-2 y 2025-1.}{}
+    \cventry{2020}{Optimización I}{Ingeniería Civil Industrial}{Departamento de Ingeniería Industrial}{impartida conjuntamente con la Prof. Rosa Medina en 2020-1, 2021-1, 2022-1, 2023-1, 2024-1 y 2025-1.}{}
     \cventry{2020}{Optimización II}{Ingeniería Civil Industrial}{Departamento de Ingeniería Industrial}{impartida conjuntamente con la Prof. Rosa Medina en en 2020-2, 2021-2, 2022-2, 2023-2 y 2024-2.}{}
 
   \subsection{Universidad de Santiago de Chile}
@@ -332,18 +332,17 @@
 
 \section{Teaching and academic appointments}
 \cventry{From \sep 2024}{Undergraduate Program Officer}{Industrial Engineering}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{} 
+\cventry{From 2025}{Claustro Professor}{Ph.D. in Industrial Engineering}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{}
 \cventry{From 2024}{Collaborator Professor}{Ph.D. in Computer Science}{Departamento de Ingeniería Informática y Ciencias de la Computación}{Universidad de Concepción.}{}  % 3 años, desde 05/08/2024.
 \cventry{From 2024}{Claustro Professor}{M.Sc. in Computer Science}{Departamento de Ingeniería Informática y Ciencias de la Computación}{Universidad de Concepción.}{}  % 3 años, desde 25/01/2024.
-\cventry{From 2022}{Collaborator Professor}{Ph.D. in Industrial Engineering}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{}
 \cventry{From 2021}{Claustro Professor}{M.Sc. in Industrial Engineering}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{}
 \cventry{From 2020}{Assistant Professor}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{}{}
-
-
 
 \section{Teaching service}
 \cventry{From 2020}{Member of the Committee of M.Sc. in Industrial Engineering}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{}{}
 \cventry{From 2022}{Member of the Committee of Industrial Engineering}{Departamento de Ingeniería Industrial}{Universidad de Concepción.}{}{}
 
+\newpage
 \section{Teaching preparation}
     \cventry{2021}{Diploma in training, learning and evaluation in higher education}{Universidad de Concepción.}{}{}{}
 %\newpage
@@ -353,9 +352,9 @@
     \cventry{2024}{Optimization}{Diploma in Artificial Intelligence}{Departamento de Ingeniería Informática y Ciencias de la Computación}{given as Professor in 2024-2.}{}
     \cventry{2022}{Introduction to Engineering Innovation}{to several Engineering}{Facultad de Ingeniería}{given as Professor in 2022-2.}{}
     \cventry{2020}{Modern Algorithms for Production}{Ph.D. and M.Sc. in Industrial Engineering}{Departamento de Ingeniería Industrial}{given jointly with Prof. Rosa Medina and Prof. Lorena Pradenas in 2020-2, 2021-2, 2022-2, 2023-2, and 2024-2.}{}
-    \cventry{2020}{Deterministic Models in Operations Research}{Ph.D. and M.Sc. in Industrial Engineering}{Departamento de Ingeniería Industrial}{given jointly with Prof. Rosa Medina and Prof. Lorena Pradenas in 2020-1, 2021-1, 2022-1, 2023-1, and 2024-1.}{}
-    \cventry{2020}{Programming Applied to Industrial Engineering}{Industrial Engineering}{Departamento de Ingeniería Industrial}{given as Professor in 2020-2, 2021-1, 2021-2, 2022-1, 2022-2, 2023-1, 2023-2, 2024-1, and 2024-2.}{}
-    \cventry{2020}{Optimization I}{Industrial Engineering}{Departamento de Ingeniería Industrial}{given jointly with Prof. Rosa Medina in 2020-1, 2021-1, 2022-1, 2023-1, and 2024-1.}{}
+    \cventry{2020}{Deterministic Models in Operations Research}{Ph.D. and M.Sc. in Industrial Engineering}{Departamento de Ingeniería Industrial}{given jointly with Prof. Rosa Medina and Prof. Lorena Pradenas in 2020-1, 2021-1, 2022-1, 2023-1, 2024-1, and 2025-1.}{}
+    \cventry{2020}{Programming Applied to Industrial Engineering}{Industrial Engineering}{Departamento de Ingeniería Industrial}{given as Professor in 2020-2, 2021-1, 2021-2, 2022-1, 2022-2, 2023-1, 2023-2, 2024-1, 2024-2, and 2025-1.}{}
+    \cventry{2020}{Optimization I}{Industrial Engineering}{Departamento de Ingeniería Industrial}{given jointly with Prof. Rosa Medina in 2020-1, 2021-1, 2022-1, 2023-1, 2024-1, and 2025-1.}{}
     \cventry{2020}{Optimization II}{Industrial Engineering}{Departamento de Ingeniería Industrial}{given jointly with Prof. Rosa Medina in 2020-2, 2021-2, 2022-2, 2023-2, and 2024-2.}{}
     \subsection{Universidad de Santiago de Chile}
     \cventry{2019}{Models and Algorithms for Optimization}{B.Sc. in Computer Science}{Departamento de Matemática y Ciencia de la Computación}{given as Professor in 2019-1 and 2019-2.}{}
@@ -396,7 +395,7 @@
 }
 
 \es{
-%% \newpage
+%%  \newpage
   \section{Premios y reconocimientos}
   \cventry{\nov 2015}{Beca Doctorado en el extranjero - Beca Chile
     2015}{Comisión Nacional de Investigación Científica y Tecnológica
@@ -502,7 +501,8 @@
 \es{
 %\newpage
   \section{Afiliaciones}
-  \cventry{\jul 2023 -- Present}{Association for Computing Machinery (ACM)}{Sociedad de computación más grande del mundo}{Miembro.}{}{}
+  \cventry{\jan 2025 -- a la fecha}{Society for Industrial and Applied Mathematics (SIAM)}{Sociedad de Matemáticas Aplicadas e Industriales}{Miembro.}{}{}
+  \cventry{\jul 2023 -- a la fecha}{Association for Computing Machinery (ACM)}{Sociedad de computación más grande del mundo}{Miembro.}{}{}
   \cventry{\mar 2012 -- a la fecha}{Instituto Chileno de Investigación de Operaciones (ICHIO)}{Sociedad Chilena de Investigación Operativa}{Miembro.}{}{}
   \cventry{\sep 2016 -- \dec 2018}{Associazione Italiana di Ricerca Operativa (AIRO)}{Sociedad Italiana de Investigación Operativa}{Miembro.}{}{}
   \cventry{\aug 2008 -- \mar 2015}{POS RIZOMA COMERCIO}{Proyecto de Software Libre}{Software de Gestión de Pymes}{Desarrollador.}{}
@@ -510,6 +510,7 @@
 {
 %%\newpage
   \section{Affiliations}
+  \cventry{\jan 2025 -- Present}{Society for Industrial and Applied Mathematics (SIAM)}{The world's largest scientific society devoted to applied mathematics}{Member.}{}{}
   \cventry{\jul 2023 -- Present}{Association for Computing Machinery (ACM)}{The world's largest computing society}{Member.}{}{}
   \cventry{\mar 2012 -- Present}{Instituto Chileno de Investigación de Operaciones (ICHIO)}{Chilean Operations Research Society}{Member.}{}{}
   \cventry{\sep 2016 -- \dec 2018}{Associazione Italiana di Ricerca Operativa (AIRO)}{Italian Operations Research Society}{Member.}{}{}

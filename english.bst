@@ -460,6 +460,10 @@ MACRO {BSC22}{"Model and resolution for the sim card migration problem in Pedido
 
 MACRO {BSC23}{"Multi-objective metaheuristic for support vector machines with feature selection"}
 
+MACRO {BSC24}{"An automatically generated heuristic algorithm for the variable size bin packing problem with time windows using genetic programming"}
+
+MACRO {BSC25}{"A machine learning-based algorithm for the multidimensional knapsack problem"}
+
 %% M.Sc.
 
 MACRO {MSC1}{"A metaheuristic for the double traveling salesman problem with partial last-in-first-out loading constraints"}
@@ -469,6 +473,8 @@ MACRO {MSC2}{"Elective surgery programming at a public hospital in {C}hile consi
 MACRO {MSC3}{"Automatic generation of algorithms for the traveling salesman problem with time-dependent service times"}
 
 MACRO {MSC4}{"A matheuristic for the traveling salesman problem with multiple drones"}
+
+MACRO {MSC5}{"An exact approach for the traveling salesman problem with job-times""}
 
 %% Journals
 
@@ -485,6 +491,7 @@ MACRO {pse} {"\myurls{https://www.sciencedirect.com/journal/psychology-of-sport-
 MACRO {esmq} {"\myurls{https://www.tandfonline.com/journals/resm20}{European Sport Management Quarterly}"}
 MACRO {eaai} {"\myurls{https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence}{Engineering Applications of Artificial Intelligence}"}
 MACRO {kbs} {"\myurls{https://www.sciencedirect.com/journal/knowledge-based-systems}{Knowledge-Based Systems}"}
+MACRO {access} {"\myurls{https://ieeeaccess.ieee.org}{IEEE Access}"}
 
 FUNCTION {bibinfo.check}
 { swap$
